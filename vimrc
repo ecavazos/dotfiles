@@ -27,6 +27,28 @@ set autoread              " reload changes
 colorscheme fixxx
 
 " -------------------------------------------------------------------------
+" Text Editor
+" -------------------------------------------------------------------------
+
+set transparency=3
+set lines=42
+set columns=120
+set wrap
+set formatoptions=tcqw
+set tw=80
+set lbr
+set gfn=DejaVu\ Sans\ Mono:h16.00     " font and size
+set smartindent
+set number
+set cursorline
+set ts=2                              " tabs are 2 spaces
+set softtabstop=2
+set bs=2                              " backspace over everything in insert mode
+set expandtab
+set shiftwidth=2                      " Tabs under smart indent
+
+
+" -------------------------------------------------------------------------
 " Folding settings
 " -------------------------------------------------------------------------
 
@@ -34,20 +56,19 @@ set foldmethod=indent     "fold based on indent
 set foldnestmax=3         "deepest fold is 3 levels
 set nofoldenable          "don't fold by default
 
-set laststatus=2
-set ruler                 " Show ruler
-
 " -------------------------------------------------------------------------
 " Status line
 " -------------------------------------------------------------------------
 
+set laststatus=2
+set ruler                             " show cursor position
 set statusline=%f
-set statusline+=%r        "read only flag
-set statusline+=%m\       "modified flag
+set statusline+=%r                    "read only flag
+set statusline+=%m\                   "modified flag
 set statusline+=[fmt=%{&ff}]
 set statusline+=[type=%y]
 set statusline+=[ascii=\%03.3b]
-set statusline+=%=        "left/right separator
+set statusline+=%=                    "left/right separator
 set statusline+=[pos=%l,%c][%p%%]\ 
 set statusline+=[len=%L]
 
@@ -107,6 +128,8 @@ set spell spl=en_us
 " Ignore extension files
 set wildignore=*.dll,*.o,*.obj,*.bak,*.pyc,*.swp " ignore these"
 
+" Turn off rails bits of statusbar
+let g:rails_statusline=0
 
 " Hide toolbar
 if has("gui_running")
@@ -119,24 +142,6 @@ if has("gui_running")
     set guioptions+=r " Right scroolbar
     set guioptions+=a " Gui visual w/ mouse (yank to "*)
 endif
-
-" Window and Font
-set transparency=3
-set lines=42
-set columns=120
-set wrap
-set formatoptions=tcqw
-set tw=80
-set lbr
-set gfn=DejaVu\ Sans\ Mono:h16.00
-set smartindent
-set number
-set cursorline
-set ts=2  " Tabs are 2 spaces
-set softtabstop=2
-set bs=2  " Backspace over everything in insert mode
-set expandtab
-set shiftwidth=2  " Tabs under smart indent
 
 au BufRead,BufNewFile * syntax match Search /\%<81v.\%>77v/
 au BufRead,BufNewFile * syntax match ErrorMsg /\%>80v.\+/
@@ -161,28 +166,35 @@ map <C-L> <C-W>l<C-W>_
 " -------------------------------------------------------------------------
 " Comments
 " -------------------------------------------------------------------------
-"
+
 au FileType ruby noremap <silent> ,c :s/^/#<cr>
 au FileType ruby noremap <silent> ,u :s/^#/<cr>
 
 au FileType javascript noremap <silent> ,c :s/^/\/\/<cr>
 au FileType javascript noremap <silent> ,u :s/^\/\//<cr>
 
+" -------------------------------------------------------------------------
 " NERDTree
+" -------------------------------------------------------------------------
+
 let NERDTreeShowBookmarks  = 1
 let NERDChristmasTree = 1
 let NERDTreeWinPos = "right"
 map <leader>n :NERDTreeToggle <cr>
 
+" -------------------------------------------------------------------------
 " FuzzyFinderTextMate
+" -------------------------------------------------------------------------
+
 let g:fuzzy_ignore = "*.log"
 let g:fuzzy_matching_limit = 70
 map <leader>t :FuzzyFinderTextMate <cr>
+map <leader>b :FuzzyFinderBuffer<CR>      "Search in Opened Buffers
 
-"Search in Opened Buffers
-map <leader>b :FuzzyFinderBuffer<CR>
-
+" -------------------------------------------------------------------------
 " Specky
+" -------------------------------------------------------------------------
+
 let g:speckyQuoteSwitcherKey = "<C-S>'"
 let g:speckyRunRdocKey = "<C-S>r"
 let g:speckySpecSwitcherKey = "<C-S>x"
@@ -195,8 +207,10 @@ let g:speckyRunRdocCmd = "fri -L -f plain"
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}'}
 let g:AutoCloseProtectedRegions = ["Character"]
 
-" Tab navigation mapped to command+tabnumber
-" command mode
+" -------------------------------------------------------------------------
+" Tab Navigation :: Normal Mode
+" -------------------------------------------------------------------------
+
 map <D-1> :tabn 1<CR>
 map <D-2> :tabn 2<CR>
 map <D-3> :tabn 3<CR>
@@ -207,7 +221,10 @@ map <D-7> :tabn 7<CR>
 map <D-8> :tabn 8<CR>
 map <D-9> :tabn 9<CR>
 
-" insert mode
+" -------------------------------------------------------------------------
+" Tab Navigation :: Insert Mode
+" -------------------------------------------------------------------------
+
 map! <D-1> <C-O>:tabn 1<CR>
 map! <D-2> <C-O>:tabn 2<CR>
 map! <D-3> <C-O>:tabn 3<CR>
@@ -218,12 +235,16 @@ map! <D-7> <C-O>:tabn 7<CR>
 map! <D-8> <C-O>:tabn 8<CR>
 map! <D-9> <C-O>:tabn 9<CR>
 
-" Make editing .vimrc easier
+" -------------------------------------------------------------------------
+" Vimrc Shortcuts
+" -------------------------------------------------------------------------
+
 map <leader>v :sp ~/.vimrc<CR>
 map <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-" Turn off rails bits of statusbar
-let g:rails_statusline=0
+" -------------------------------------------------------------------------
+" Tidy
+" -------------------------------------------------------------------------
 
 function! Preserve(command)
   " Preparation: save last search, and cursor position.
@@ -239,6 +260,7 @@ endfunction
 
 " remove trailing white spaces
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+
 " tidy whitespace
 nmap _= :call Preserve("normal gg=G")<CR>
 
