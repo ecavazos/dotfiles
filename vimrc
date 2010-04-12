@@ -113,9 +113,6 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <C-B> :BufExplorer<cr>
 
-"map to fuzzy finder text mate stylez
-nnoremap <c-f> :FuzzyFinderTextMate<CR>
-
 "map Q to something useful
 noremap Q gq
 
@@ -177,7 +174,7 @@ au FileType javascript noremap <silent> ,u :s/^\/\//<cr>
 " NERDTree
 " -------------------------------------------------------------------------
 
-let NERDTreeShowBookmarks  = 1
+let NERDTreeShowBookmarks = 1
 let NERDChristmasTree = 1
 let NERDTreeWinPos = "right"
 map <leader>n :NERDTreeToggle <cr>
@@ -189,7 +186,8 @@ map <leader>n :NERDTreeToggle <cr>
 let g:fuzzy_ignore = "*.log"
 let g:fuzzy_matching_limit = 70
 map <leader>t :FuzzyFinderTextMate <cr>
-map <leader>b :FuzzyFinderBuffer<CR>      "Search in Opened Buffers
+map <leader>b :FuzzyFinderBuffer<CR>      " search in open buffers
+nnoremap <c-f> :FuzzyFinderTextMate<CR>   " map just like text mate
 
 " -------------------------------------------------------------------------
 " Specky
