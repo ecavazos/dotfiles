@@ -24,7 +24,7 @@ hi Cursor         guifg=#000000 guibg=#FFFFFF gui=none
 hi Normal         guifg=#FFFAFA guibg=#06000A gui=none
 hi NonText        guifg=#FF0000 guibg=#06000A gui=none
 hi LineNr         guifg=#696969 guibg=#181818 gui=none
-hi StatusLine     guifg=#FFFFFF guibg=#06000A gui=italic
+hi StatusLine     guifg=#999999 guibg=#181818 gui=italic
 hi StatusLineNC   guifg=#FFFFFF guibg=#06000A gui=none
 hi VertSplit      guifg=#FFFFFF guibg=#06000A gui=none
 hi Folded         guifg=#FFFFFF guibg=#06000A gui=none

@@ -1,5 +1,3 @@
-" source ~/.vim/vimrc
-
 " -------------------------------------------------------------------------
 " Basics
 " -------------------------------------------------------------------------
@@ -14,7 +12,7 @@ set backspace=indent,eol,start
 let mapleader=","         " set leader key
 set history=1000          " store lots of :cmdline history
 set directory=/tmp        " use directory for all .swp files
-set showcmd               " show incomplete cmds down the bottom
+set showcmd               " show incomplete commands
 set showmode              " show current mode down the bottom
 set incsearch             " find the next match as we type the search
 set hlsearch              " highlight searches by default
@@ -35,6 +33,23 @@ colorscheme fixxx
 set foldmethod=indent     "fold based on indent
 set foldnestmax=3         "deepest fold is 3 levels
 set nofoldenable          "don't fold by default
+
+set laststatus=2
+set ruler                 " Show ruler
+
+" -------------------------------------------------------------------------
+" Status line
+" -------------------------------------------------------------------------
+
+set statusline=%f
+set statusline+=%r        "read only flag
+set statusline+=%m\       "modified flag
+set statusline+=[fmt=%{&ff}]
+set statusline+=[type=%y]
+set statusline+=[ascii=\%03.3b]
+set statusline+=%=        "left/right separator
+set statusline+=[pos=%l,%c][%p%%]\ 
+set statusline+=[len=%L]
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
@@ -61,9 +76,6 @@ syntax on
 "some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
-
-"tell the term has 256 colors
-"set t_Co=256
 
 "hide buffers when not displayed
 set hidden
@@ -125,7 +137,6 @@ set softtabstop=2
 set bs=2  " Backspace over everything in insert mode
 set expandtab
 set shiftwidth=2  " Tabs under smart indent
-set showcmd " Display incomplete commands
 
 au BufRead,BufNewFile * syntax match Search /\%<81v.\%>77v/
 au BufRead,BufNewFile * syntax match ErrorMsg /\%>80v.\+/
@@ -147,7 +158,10 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-L> <C-W>l<C-W>_
 
+" -------------------------------------------------------------------------
 " Comments
+" -------------------------------------------------------------------------
+"
 au FileType ruby noremap <silent> ,c :s/^/#<cr>
 au FileType ruby noremap <silent> ,u :s/^#/<cr>
 
