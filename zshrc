@@ -8,6 +8,16 @@ autoload -U colors && colors
 # automatically enter directories without cd
 setopt auto_cd
 
+# path to gems
+export GEM_HOME="/usr/local/lib/ruby/gems/1.9.1"
+
+# add my bin path
+export PATH="/usr/local/bin:$PATH"
+
+# always load rubygems
+RUBYOPT="rubygems"
+export RUBYOPT
+
 # use vim as an editor
 export EDITOR=mvim
 

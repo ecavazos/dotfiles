@@ -30,8 +30,8 @@ hi Visual         guifg=#FFEBFB guibg=#690054 gui=none
 hi SpecialKey     guifg=#FF0000 guibg=#323232 gui=none
 
 " Syntax highlighting
-hi Comment              guifg=#BBBBBB guibg=#222222 gui=italic
-hi Constant             guifg=#4BF0FF gui=none
+hi Comment              guifg=#B0C5B8 guibg=#171717 gui=italic
+hi Constant             guifg=#87D350 gui=none
 hi Number               guifg=#B076DA gui=none
 hi Identifier           guifg=#FFFFFF gui=underline
 hi Statement            guifg=#62CE00 gui=none
@@ -45,7 +45,7 @@ hi Type                 guifg=#3482CF gui=none
 hi rubyMethod           guifg=#62CE00 gui=none
 hi Regexp               guifg=#FF0000 gui=none
 hi rubyRegexp           guifg=#FF0000 gui=none
-hi Variable             guifg=#FF00FF gui=underline
+hi Variable             guifg=#C7F07A gui=none
 hi rubyConstant         guifg=#FFFF00 gui=none
 hi javascriptIdentifier guifg=#FF7D00 gui=none
 hi javascriptType       guifg=#E7E709 gui=none
