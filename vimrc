@@ -80,7 +80,7 @@ set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set list
 set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
-set formatoptions-=o "dont continue comments when pushing o/O
+set formatoptions-=o "don't continue comments when pushing o/O
 
 "vertical/horizontal scroll off settings
 set scrolloff=3
@@ -128,7 +128,10 @@ set wildignore=*.dll,*.o,*.obj,*.bak,*.pyc,*.swp " ignore these"
 " Turn off rails bits of statusbar
 let g:rails_statusline=0
 
-" Hide toolbar
+" -------------------------------------------------------------------------
+" GUI
+" -------------------------------------------------------------------------
+
 if has("gui_running")
     " set guioptions=egmrt
     set guioptions+=e " No gui-like tabs
@@ -147,12 +150,14 @@ au BufRead,BufNewFile * syntax match ErrorMsg /\%>80v.\+/
 set ignorecase
 set smartcase
 
-" Use Ack instead of Grep when available
+" -------------------------------------------------------------------------
+" Ack
+" -------------------------------------------------------------------------
+
 if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
+  map <leader>f :Ack
 endif
-
-map <leader>f :Ack
 
 " Quick jumping between splits
 map <C-H> <C-W>h<C-W>_

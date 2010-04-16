@@ -29,6 +29,10 @@ hi Title          guifg=#FF0000 guibg=NONE    gui=bold
 hi Visual         guifg=#FFEBFB guibg=#690054 gui=none
 hi SpecialKey     guifg=#FF0000 guibg=#323232 gui=none
 
+hi ErrorMsg       guifg=NONE    guibg=#E93600 gui=none
+hi Search         guifg=#222222 guibg=#D2F72D
+
+
 " Syntax highlighting
 hi Comment              guifg=#B0C5B8 guibg=#171717 gui=italic
 hi Constant             guifg=#87D350 gui=none
