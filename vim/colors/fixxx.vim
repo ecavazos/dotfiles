@@ -12,13 +12,13 @@ if version >= 700
   hi CursorLine   guibg=#181818
   hi CursorColumn guibg=#181818
   hi MatchParen   guifg=#DFCA00 guibg=#06000A gui=bold
-  hi Pmenu        guifg=#FFFFFF guibg=#14369B
-  hi PmenuSel     guifg=#FAC539 guibg=#181818
+  hi Pmenu        guifg=#FFFFFF guibg=#252525
+  hi PmenuSel     guifg=#FAC539 guibg=#000000
 endif
 
 " TODO:
 " fix plain text color in html files
-" 
+"
 
 " General colors
 hi Cursor         guifg=#000000 guibg=#FFFFFF gui=none
@@ -39,6 +39,7 @@ hi Search         guifg=#222222 guibg=#D2F72D
 
 " Syntax highlighting
 hi Comment              guifg=#B0C5B8 guibg=#171717 gui=italic
+hi Todo                 guifg=#FFA047 guibg=#171717 gui=none
 hi Number               guifg=#B076DA gui=none
 hi Constant             guifg=#87D350 gui=none
 hi Identifier           guifg=#3482CF gui=none
@@ -48,7 +49,7 @@ hi PreProc              guifg=#63E03D gui=none
 hi Function             guifg=#1E90FF gui=none
 hi Special              guifg=#CCFFFF gui=none
 hi Keyword              guifg=#FF44A5 gui=none
-hi String               guifg=#EC1FFF guibg=#202020 gui=none
+hi String               guifg=#4791FF guibg=#202020 gui=none
 
 hi rubyMethod           guifg=#62CE00 gui=none
 hi Regexp               guifg=#FF0000 gui=none
