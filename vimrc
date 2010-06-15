@@ -106,9 +106,16 @@ if !has("gui")
     let g:CSApprox_loaded = 1
 endif
 
+" -------------------------------------------------------------------------
+" Mappings
+" -------------------------------------------------------------------------
+
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
+
+" get out of insert mode
+inoremap kj <Esc>
 
 "map to bufexplorer
 nnoremap <C-B> :BufExplorer<cr>
@@ -118,6 +125,12 @@ noremap Q gq
 
 "make Y consistent with C and D
 nnoremap Y y$
+
+" Quick jumping between splits
+map <C-H> <C-W>h<C-W>_
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+map <C-L> <C-W>l<C-W>_
 
 " Always turn on spell check
 set spell spl=en_us
@@ -158,12 +171,6 @@ if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
   map <leader>f :Ack
 endif
-
-" Quick jumping between splits
-map <C-H> <C-W>h<C-W>_
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-L> <C-W>l<C-W>_
 
 " -------------------------------------------------------------------------
 " Comments
