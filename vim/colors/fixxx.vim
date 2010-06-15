@@ -39,9 +39,9 @@ hi Search         guifg=#222222 guibg=#D2F72D
 
 " Syntax highlighting
 hi Comment              guifg=#B0C5B8 guibg=#171717 gui=italic
-hi Todo                 guifg=#FFA047 guibg=#171717 gui=none
-hi Number               guifg=#B076DA gui=none
+hi Todo                 guifg=#87D350 guibg=#171717 gui=italic
 hi Constant             guifg=#87D350 gui=none
+hi Number               guifg=#B076DA gui=none
 hi Identifier           guifg=#3482CF gui=none
 hi Type                 guifg=#3482CF gui=none
 hi Statement            guifg=#62CE00 gui=none
@@ -49,8 +49,8 @@ hi PreProc              guifg=#63E03D gui=none
 hi Function             guifg=#1E90FF gui=none
 hi Special              guifg=#CCFFFF gui=none
 hi Keyword              guifg=#FF44A5 gui=none
-hi String               guifg=#4791FF guibg=#202020 gui=none
-
+hi String               guifg=#7ABFFF guibg=#161616 gui=none
+hi Operator             guifg=#FF0000
 hi rubyMethod           guifg=#62CE00 gui=none
 hi Regexp               guifg=#FF0000 gui=none
 hi rubyRegexp           guifg=#FF0000 gui=none
@@ -58,9 +58,13 @@ hi Variable             guifg=#C7F07A gui=none
 hi rubyConstant         guifg=#FFFF00 gui=none
 hi javascriptIdentifier guifg=#FF7D00 gui=none
 hi javascriptType       guifg=#E7E709 gui=none
+hi railsMethod          guifg=#FFA8F5 gui=none
 
-hi link railsMethod             PreProc
 hi link railsUserMethod         PreProc
+hi link rubyRailsMethod         railsMethod
+hi link rubyRailsUserMethod     railsMethod
+hi link rubyRailsTestMethod     railsMethod
+hi link rubyRailsTestMacro      Keyword
 hi link rubyDefine              Keyword
 hi link rubySymbol              Constant
 hi link rubyAccess              rubyMethod
@@ -71,6 +75,7 @@ hi link rubyInclude             rubyMethod
 hi link rubyStringDelimiter     rubyString
 hi link rubyRegexp              Regexp
 hi link rubyRegexpDelimiter     rubyRegexp
+hi link rubyOperator            Operator
 "hi link rubyGlobalVariable     Variable
 hi link rubyClassVariable       Variable
 hi link rubyInstanceVariable    Variable
@@ -78,4 +83,5 @@ hi link javascriptRegexpString  Regexp
 hi link javascriptNumber        Number
 hi link javascriptNull          Constant
 hi link javascriptVariable      Variable
+hi link javascriptOperator      Operator
 
