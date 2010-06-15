@@ -46,3 +46,6 @@ setopt histignoredups
 
 # keep more history
 export HISTSIZE=200
+
+# rvm
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

@@ -16,6 +16,10 @@ if version >= 700
   hi PmenuSel     guifg=#FAC539 guibg=#181818
 endif
 
+" TODO:
+" fix plain text color in html files
+" 
+
 " General colors
 hi Cursor         guifg=#000000 guibg=#FFFFFF gui=none
 hi Normal         guifg=#FFFAFA guibg=#06000A gui=none
@@ -25,7 +29,7 @@ hi StatusLine     guifg=#999999 guibg=#181818 gui=italic
 hi StatusLineNC   guifg=#FFFFFF guibg=#06000A gui=none
 hi VertSplit      guifg=#FFFFFF guibg=#06000A gui=none
 hi Folded         guifg=#FFFFFF guibg=#06000A gui=none
-hi Title          guifg=#FF0000 guibg=NONE    gui=bold
+hi Title          guifg=#FFFFFF guibg=NONE    gui=none
 hi Visual         guifg=#FFEBFB guibg=#690054 gui=none
 hi SpecialKey     guifg=#FF0000 guibg=#323232 gui=none
 
@@ -35,16 +39,16 @@ hi Search         guifg=#222222 guibg=#D2F72D
 
 " Syntax highlighting
 hi Comment              guifg=#B0C5B8 guibg=#171717 gui=italic
-hi Constant             guifg=#87D350 gui=none
 hi Number               guifg=#B076DA gui=none
-hi Identifier           guifg=#FFFFFF gui=underline
+hi Constant             guifg=#87D350 gui=none
+hi Identifier           guifg=#3482CF gui=none
+hi Type                 guifg=#3482CF gui=none
 hi Statement            guifg=#62CE00 gui=none
+hi PreProc              guifg=#63E03D gui=none
 hi Function             guifg=#1E90FF gui=none
 hi Special              guifg=#CCFFFF gui=none
-hi PreProc              guifg=#63E03D gui=none
 hi Keyword              guifg=#FF44A5 gui=none
 hi String               guifg=#EC1FFF guibg=#202020 gui=none
-hi Type                 guifg=#3482CF gui=none
 
 hi rubyMethod           guifg=#62CE00 gui=none
 hi Regexp               guifg=#FF0000 gui=none
@@ -55,6 +59,7 @@ hi javascriptIdentifier guifg=#FF7D00 gui=none
 hi javascriptType       guifg=#E7E709 gui=none
 
 hi link railsMethod             PreProc
+hi link railsUserMethod         PreProc
 hi link rubyDefine              Keyword
 hi link rubySymbol              Constant
 hi link rubyAccess              rubyMethod
