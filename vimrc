@@ -192,14 +192,14 @@ let NERDTreeWinPos = "right"
 map <leader>n :NERDTreeToggle <cr>
 
 " -------------------------------------------------------------------------
-" FuzzyFinderTextMate
+" FuzzyFinder
 " -------------------------------------------------------------------------
 
-let g:fuzzy_ignore = "*.log"
-let g:fuzzy_matching_limit = 70
-map <leader>t :FuzzyFinderTextMate <cr>
-map <leader>b :FuzzyFinderBuffer<CR>      " search in open buffers
-nnoremap <c-f> :FuzzyFinderTextMate<CR>   " map just like text mate
+" let g:fuzzy_ignore = "*.log"
+" let g:fuzzy_matching_limit = 70
+map <leader>t :FufFile<cr>
+map <leader>b :FufBuffer<cr>      " search in open buffers
+nnoremap <leader>ff :FufLine<cr>  " map just like text mate
 
 " -------------------------------------------------------------------------
 " Specky
