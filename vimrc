@@ -117,6 +117,9 @@ inoremap <C-L> <C-O>:nohls<CR>
 " get out of insert mode
 inoremap kj <Esc>
 
+" get out of insert mode and save
+inoremap <silent> lkj <Esc> :w<cr><bs>
+
 "map to bufexplorer
 nnoremap <C-B> :BufExplorer<cr>
 
