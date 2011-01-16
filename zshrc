@@ -22,7 +22,7 @@ export RUBYOPT
 export EDITOR=mvim
 
 # use macvim as git editor
-export GIT_EDITOR=$EDITOR
+export GIT_EDITOR='$EDITOR -f -c"au VimLeave * !open -a Terminal"'
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
