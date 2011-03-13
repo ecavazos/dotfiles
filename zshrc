@@ -40,8 +40,8 @@ bindkey ^R history-incremental-search-backward
 # expand functions in the prompt
 setopt prompt_subst
 
-# set prompt to the current directory in red ex: "Stuff: "
-export PS1="%{$terminfo[bold]$fg[red]%}%1d: %{$reset_color%}"
+# set prompt
+PROMPT='%{$reset_color%}`git-prompt`%(!.#.>) '
 
 # ignore duplicate history entries
 setopt histignoredups
