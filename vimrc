@@ -37,7 +37,7 @@ set wrap
 set formatoptions=tcqw
 set tw=80
 set lbr
-set gfn=DejaVu\ Sans\ Mono:h16.00     " font and size
+set gfn=Inconsolata:h16.00     " font and size
 set smartindent
 set number
 set cursorline
@@ -69,7 +69,7 @@ set statusline+=[fmt=%{&ff}]
 set statusline+=[type=%y]
 set statusline+=[ascii=\%03.3b]
 set statusline+=%=                    "left/right separator
-set statusline+=[pos=%l,%c][%p%%]\ 
+set statusline+=[pos=%l,%c][%p%%]\
 set statusline+=[len=%L]
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
