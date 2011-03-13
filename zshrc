@@ -24,9 +24,11 @@ export EDITOR=mvim
 # use macvim as git editor
 export GIT_EDITOR='$EDITOR -f -c"au VimLeave * !open -a Terminal"'
 
-# aliases
-if [ -e "$HOME/.aliases" ]; then
-  source "$HOME/.aliases"
+# source additional config files
+if [[ $SHLVL < 3 ]]; then
+  for f in $HOME/.zsh/*; do
+    source $f
+  done
 fi
 
 # vi mode
