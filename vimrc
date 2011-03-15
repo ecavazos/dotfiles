@@ -130,10 +130,10 @@ noremap Q gq
 nnoremap Y y$
 
 " Quick jumping between splits
-map <C-H> <C-W>h<C-W>_
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-L> <C-W>l<C-W>_
+map <C-H> <C-W>h
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
 
 " Always turn on spell check
 set spell spl=en_us
