@@ -12,7 +12,7 @@ setopt auto_cd
 export GEM_HOME="/usr/local/lib/ruby/gems/1.9.1"
 
 # add my bin path
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/mysql/bin:/usr/local/bin:$PATH;"
 
 # always load rubygems
 RUBYOPT="rubygems"
