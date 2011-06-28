@@ -37,15 +37,15 @@ set wrap
 set formatoptions=tcqw
 set tw=80
 set lbr
-set gfn=Inconsolata:h16.00     " font and size
+set gfn=Inconsolata:h16.00    " font and size
 set smartindent
 set number
 set cursorline
-set ts=2                              " tabs are 2 spaces
+set ts=2                      " tabs are 2 spaces
 set softtabstop=2
-set bs=2                              " backspace over everything in insert mode
+set bs=2                      " backspace over everything in insert mode
 set expandtab
-set shiftwidth=2                      " Tabs under smart indent
+set shiftwidth=2              " Tabs under smart indent
 
 
 " -------------------------------------------------------------------------
@@ -159,8 +159,8 @@ if has("gui_running")
     set guioptions+=a " Gui visual w/ mouse (yank to "*)
 endif
 
-au BufRead,BufNewFile * syntax match Search /\%<81v.\%>77v/
-au BufRead,BufNewFile * syntax match ErrorMsg /\%>80v.\+/
+au BufRead,BufNewFile * syntax match LongLineWarn /\%<81v.\%>70v/ " long line warning
+au BufRead,BufNewFile * syntax match LongLine /\%>80v.\+/         " long line
 
 " case only matters with mixed case expressions
 set ignorecase
@@ -172,7 +172,7 @@ set smartcase
 
 if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
-  map <leader>f :Ack
+  map <leader>f :Ack 
 endif
 
 " -------------------------------------------------------------------------

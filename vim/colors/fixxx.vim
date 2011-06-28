@@ -36,6 +36,8 @@ hi SpecialKey     guifg=#FF0000 guibg=#323232 gui=none
 hi ErrorMsg       guifg=NONE    guibg=#E93600 gui=none
 hi Search         guifg=#222222 guibg=#D2F72D
 
+hi LongLineWarn   guifg=#ffeb9d
+hi LongLine       guifg=#ffafff
 
 " Syntax highlighting
 hi Comment              guifg=#B0C5B8 guibg=#171717 gui=italic
