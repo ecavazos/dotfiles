@@ -159,8 +159,16 @@ if has("gui_running")
     set guioptions+=a " Gui visual w/ mouse (yank to "*)
 endif
 
-au BufRead,BufNewFile * syntax match LongLineWarn /\%<81v.\%>70v/ " long line warning
-au BufRead,BufNewFile * syntax match LongLine /\%>80v.\+/         " long line
+" -------------------------------------------------------------------------
+" Long line warning
+" -------------------------------------------------------------------------
+
+if exists('+colorcolumn')
+  set colorcolumn=80
+  hi ColorColumn guibg=#300000
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 " case only matters with mixed case expressions
 set ignorecase
