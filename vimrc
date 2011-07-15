@@ -19,6 +19,7 @@ set hlsearch              " highlight searches by default
 set nowrap                " don't wrap lines
 set linebreak             " wrap lines at convenient points
 set autoread              " reload changes
+set visualbell            " visual beep
 
 " -------------------------------------------------------------------------
 " Colors
