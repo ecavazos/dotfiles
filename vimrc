@@ -63,15 +63,7 @@ set nofoldenable          "don't fold by default
 
 set laststatus=2
 set ruler                             " show cursor position
-set statusline=%f
-set statusline+=%r                    "read only flag
-set statusline+=%m\                   "modified flag
-set statusline+=[fmt=%{&ff}]
-set statusline+=[type=%y]
-set statusline+=[ascii=\%03.3b]
-set statusline+=%=                    "left/right separator
-set statusline+=[pos=%l,%c][%p%%]\
-set statusline+=[len=%L]
+set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
