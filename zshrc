@@ -8,11 +8,11 @@ autoload -U colors && colors
 # automatically enter directories without cd
 setopt auto_cd
 
-# path to gems
-export GEM_HOME="/usr/local/lib/ruby/gems/1.9.1"
+# for mysql :(
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
 # add my bin path
-export PATH="/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH;"
+export PATH="/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH"
 
 # always load rubygems
 RUBYOPT="rubygems"
