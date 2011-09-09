@@ -14,9 +14,10 @@ export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 # add my bin path
 export PATH="/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH"
 
+# always show warnings
 # always load rubygems
-RUBYOPT="rubygems"
-export RUBYOPT
+# export RUBYOPT="-w rubygems"
+export RUBYOPT="rubygems"
 
 # use vim as an editor
 export EDITOR=mvim

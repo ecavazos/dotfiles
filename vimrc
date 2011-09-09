@@ -34,7 +34,6 @@ colorscheme fixxx
 set transparency=3
 set lines=42
 set columns=120
-set wrap
 set formatoptions=tcqw
 set tw=80
 set lbr
