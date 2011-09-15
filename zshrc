@@ -33,7 +33,7 @@ if [[ $SHLVL < 3 ]]; then
 fi
 
 # vi mode
-bindkey -v
+# bindkey -v
 
 # use incremental search
 bindkey ^R history-incremental-search-backward
@@ -47,8 +47,10 @@ PROMPT='%{$reset_color%}`git-prompt`%(!.#.>) '
 # ignore duplicate history entries
 setopt histignoredups
 
-# keep more history
-export HISTSIZE=200
+# Unbreak history
+export HISTSIZE=100000
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
 
 # rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

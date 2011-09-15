@@ -34,7 +34,7 @@ hi Visual         guifg=#FFEBFB guibg=#690054 gui=none
 hi SpecialKey     guifg=#FF0000 guibg=#323232 gui=none
 
 hi ErrorMsg       guifg=NONE    guibg=#E93600 gui=none
-hi Search         guifg=#222222 guibg=#D2F72D
+hi Search         guifg=#D2F72D guibg=#06000A gui=underline
 
 " Syntax highlighting
 hi Comment              guifg=#B0C5B8 guibg=#171717 gui=italic
