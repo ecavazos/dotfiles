@@ -96,11 +96,6 @@ set ttymouse=xterm2
 "hide buffers when not displayed
 set hidden
 
-"dont load csapprox if we no gui support - silences an annoying warning
-if !has("gui")
-    let g:CSApprox_loaded = 1
-endif
-
 " -------------------------------------------------------------------------
 " Mappings
 " -------------------------------------------------------------------------
@@ -281,4 +276,6 @@ nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
 
 " :retab!  convert tabs to spaces
+
+
 
