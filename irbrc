@@ -1,7 +1,7 @@
 require "rubygems"
-require 'hirb'
+# require 'hirb'
  
-Hirb.enable :output=>{'Object'=>{:class=>:auto_table, :ancestor=>true}}
+# Hirb.enable :output=>{'Object'=>{:class=>:auto_table, :ancestor=>true}}
  
 IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:USE_READLINE] = true

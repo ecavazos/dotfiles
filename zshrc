@@ -14,6 +14,10 @@ export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 # add my bin path
 export PATH="/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH"
 
+export ARCHFLAGS="-arch x86_64"
+export LANG="en_us.UTF-8"
+export CC=/usr/bin/gcc-4.2
+
 # always show warnings
 # always load rubygems
 # export RUBYOPT="-w rubygems"
