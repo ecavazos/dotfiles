@@ -24,9 +24,9 @@ endif
 hi Cursor         guifg=#000000 guibg=#FFFFFF gui=none
 hi Normal         guifg=#FFFAFA guibg=#06000A gui=none
 hi NonText        guifg=#FF0000 guibg=#06000A gui=none
-hi LineNr         guifg=#696969 guibg=#181818 gui=none
-hi StatusLine     guifg=#999999 guibg=#181818 gui=italic
-hi StatusLineNC   guifg=#FFFFFF guibg=#06000A gui=none
+hi LineNr         guifg=#434870 guibg=#181818 gui=none
+hi StatusLine     guifg=#FFFFFF guibg=#333333 gui=italic
+hi StatusLineNC   guifg=#CCCCCC guibg=#222222 gui=none
 hi VertSplit      guifg=#FFFFFF guibg=#06000A gui=none
 hi Folded         guifg=#FFFFFF guibg=#06000A gui=none
 hi Title          guifg=#FFFFFF guibg=NONE    gui=none
@@ -40,7 +40,7 @@ hi Search         guifg=#D2F72D guibg=#06000A gui=underline
 hi Comment              guifg=#B0C5B8 guibg=#171717 gui=italic
 hi Todo                 guifg=#87D350 guibg=#171717 gui=italic
 hi Constant             guifg=#87D350 gui=none
-hi Number               guifg=#B076DA gui=none
+hi Number               guifg=#c7e7fd gui=none
 hi Identifier           guifg=#3482CF gui=none
 hi Type                 guifg=#3482CF gui=none
 hi Statement            guifg=#62CE00 gui=none
