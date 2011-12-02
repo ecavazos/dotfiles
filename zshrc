@@ -12,7 +12,7 @@ setopt auto_cd
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
 # add my bin path
-export PATH="/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH"
+export PATH="/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 export ARCHFLAGS="-arch x86_64"
 export LANG="en_us.UTF-8"
