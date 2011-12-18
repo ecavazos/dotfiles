@@ -10,8 +10,7 @@ if has("gui_running")
     set guioptions+=t " Include tearoff menu items
     set guioptions-=T " No toolbar
     set guioptions-=m " No menubar
-    set guioptions+=r " Right scroolbar
-    " set guioptions+=a " Gui visual w/ mouse (yank to "*)
+    set guioptions-=r " Right scroolbar
 endif
 
 " -------------------------------------------------------------------------
