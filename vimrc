@@ -28,7 +28,9 @@ set visualbell            " visual beep
 " Colors
 " -------------------------------------------------------------------------
 
-colorscheme fixxx
+syntax enable
+set background=dark
+colorscheme solarized
 
 " -------------------------------------------------------------------------
 " Text Editor
@@ -48,6 +50,7 @@ set softtabstop=2
 set bs=2                      " backspace over everything in insert mode
 set expandtab
 set shiftwidth=2              " Tabs under smart indent
+set linespace=4
 
 
 " -------------------------------------------------------------------------
@@ -84,9 +87,6 @@ set sidescroll=1
 "load ftplugins and indent files
 filetype plugin on
 filetype indent on
-
-"turn on syntax highlighting
-syntax on
 
 "some stuff to get the mouse going in term
 set mouse=a
