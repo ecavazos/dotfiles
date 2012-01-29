@@ -174,14 +174,13 @@ let NERDTreeWinPos = "right"
 map <leader>n :NERDTreeToggle <cr>
 
 " -------------------------------------------------------------------------
-" FuzzyFinder
+" CtrlP - Full path fuzzy file, buffer, mru and tag finder for Vim.
+" https://github.com/kien/ctrlp.vim
 " -------------------------------------------------------------------------
 
-" let g:fuzzy_ignore = "*.log"
-" let g:fuzzy_matching_limit = 70
-map <leader>t :FufFile<cr>
-map <leader>b :FufBuffer<cr>      " search in open buffers
-nnoremap <leader>ff :FufLine<cr>  " map just like text mate
+map <leader>t :CtrlP<cr>
+map <leader>b :CtrlPBuffer<cr> " search in open buffers
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " -------------------------------------------------------------------------
 " Specky
