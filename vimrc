@@ -30,7 +30,12 @@ set visualbell            " visual beep
 
 syntax enable
 set background=dark
+
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+
 colorscheme solarized
+
 
 " -------------------------------------------------------------------------
 " Text Editor
@@ -58,7 +63,7 @@ set linespace=4
 " -------------------------------------------------------------------------
 
 set foldmethod=indent     "fold based on indent
-set foldnestmax=3         "deepest fold is 3 levels
+"set foldnestmax=3         "deepest fold is 3 levels
 set nofoldenable          "don't fold by default
 
 " -------------------------------------------------------------------------
@@ -73,49 +78,50 @@ set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
-"display tabs and trailing spaces
+" Display tabs and trailing spaces
 set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+set listchars=tab:▸\ ,eol:¬,trail:⋅,nbsp:⋅
+set showbreak=↪
 
-set formatoptions-=o "don't continue comments when pushing o/O
+set formatoptions-=o " Don't continue comments when pushing o/O
 
-"vertical/horizontal scroll off settings
+" Vertical/horizontal scroll off settings
 set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
 
-"load ftplugins and indent files
+" Load ftplugins and indent files
 filetype plugin on
 filetype indent on
 
-"some stuff to get the mouse going in term
+" Some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
 
-"hide buffers when not displayed
+" Hide buffers when not displayed
 set hidden
 
 " -------------------------------------------------------------------------
 " Mappings
 " -------------------------------------------------------------------------
 
-"make <c-l> clear the highlight as well as redraw
+" Make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
-" get out of insert mode
+" Get out of insert mode
 inoremap kj <Esc>
 
-" get out of insert mode and save
+" Get out of insert mode and save
 inoremap <silent> lkj <Esc> :w<cr><bs>
 
-"map to bufexplorer
+" Map to bufexplorer
 nnoremap <C-B> :BufExplorer<cr>
 
-"map Q to something useful
+" Map Q to something useful
 noremap Q gq
 
-"make Y consistent with C and D
+" Make Y consistent with C and D
 nnoremap Y y$
 
 " Quick jumping between splits
@@ -123,6 +129,20 @@ map <C-H> <C-W>h
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" ex mode commands made easy
+nnoremap ; :
+
+" Quickly move between prev/next buffers
+:noremap <left>  :bp<CR>
+:noremap <right> :bn<CR>
+
+" Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>="
 
 " Always turn on spell check
 set spell spl=en_us
@@ -152,7 +172,7 @@ set smartcase
 " Grep.vim
 " -------------------------------------------------------------------------
 
-map <leader>f :Grep -rin 
+map gr :Grep -rin 
 
 " -------------------------------------------------------------------------
 " Comments
@@ -171,7 +191,11 @@ au FileType javascript noremap <silent> ,u :s/^\/\//<cr>
 let NERDTreeShowBookmarks = 1
 let NERDChristmasTree = 1
 let NERDTreeWinPos = "right"
+
 map <leader>n :NERDTreeToggle <cr>
+
+" Show current file in NERDTree
+map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
 " -------------------------------------------------------------------------
 " CtrlP - Full path fuzzy file, buffer, mru and tag finder for Vim.
@@ -205,6 +229,9 @@ let g:AutoCloseProtectedRegions = ["Character"]
 map <leader>v :sp ~/.vimrc<CR>
 map <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
+" automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
+
 " -------------------------------------------------------------------------
 " Tidy
 " -------------------------------------------------------------------------
@@ -228,5 +255,4 @@ nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
 
 " :retab!  convert tabs to spaces
-
 
