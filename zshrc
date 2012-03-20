@@ -56,5 +56,16 @@ export HISTSIZE=100000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
+# Knife: knife-staging status
+knife-office() {
+  knife $* -c ~/.chef/knife.office.rb
+}
+knife-staging() {
+  knife $* -c ~/.chef/knife.staging.rb
+}
+knife-staging() {
+  knife $* -c ~/.chef/knife.production.rb
+}
+
 # rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

@@ -22,16 +22,20 @@
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [alias]
-  st = status
-  ss = status -s
-  ci = commit
-  br = branch
-  co = checkout
-  df = diff
-  lg = log -p
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  hs = shortlog -ns HEAD
+  st      = status
+  pl      = pull
+  ps      = push
+  s       = status -s
+  ss      = status -s
+  c       = commit
+  ci      = commit
+  br      = branch
+  co      = checkout
+  df      = diff
+  lg      = log -p
+  lol     = log --graph --decorate --pretty --oneline --abbrev-commit
+  lola    = log --graph --decorate --pretty --oneline --abbrev-commit --all
+  hs      = shortlog -ns HEAD
   unstage = reset HEAD
 
 [user]

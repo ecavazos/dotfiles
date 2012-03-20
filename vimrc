@@ -36,7 +36,6 @@ let g:solarized_termtrans=1
 
 colorscheme solarized
 
-
 " -------------------------------------------------------------------------
 " Text Editor
 " -------------------------------------------------------------------------
@@ -46,7 +45,7 @@ colorscheme solarized
 "set formatoptions=tcqw
 "set tw=80
 set lbr
-set gfn=Inconsolata:h16.00    " font and size
+set gfn=Inconsolata:h20.00    " font and size
 set smartindent
 set number
 set cursorline
@@ -129,13 +128,6 @@ map <C-H> <C-W>h
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
-
-" Reselect visual block after indent/outdent
-vnoremap < <gv
-vnoremap > >gv
-
-" ex mode commands made easy
-nnoremap ; :
 
 " Quickly move between prev/next buffers
 :noremap <left>  :bp<CR>
