@@ -48,30 +48,30 @@ hi Comment              guifg=#B0C5B8 guibg=#171717 gui=italic
 hi Todo                 guifg=#87D350 guibg=#171717 gui=italic
 hi Constant             guifg=#87D350 gui=none " self
 hi Number               guifg=#FFD07F gui=none
-hi Identifier           guifg=#fc63c4 gui=none " ctrl-p matches, block vars
-hi Type                 guifg=#3482CF gui=none
-hi Statement            guifg=#91caff gui=none " if, return, unless, begin, recue
-hi PreProc              guifg=#b7bbff gui=none
-hi Function             guifg=#fcc9ff gui=none
-hi Special              guifg=#fea400 gui=none
-hi Keyword              guifg=#de98ff gui=none " def end
-hi String               guifg=#45d353 guibg=#161616 gui=none
+hi Identifier           guifg=#FC63C4 gui=none " ctrl-p matches, block vars
+hi Type                 guifg=#67a2f0 gui=none " class names
+hi Statement            guifg=#91CAFF gui=none " if, return, unless, begin, recue
+hi PreProc              guifg=#B7BBFF gui=none
+hi Function             guifg=#FCC9FF gui=none
+hi Special              guifg=#FEA400 gui=none
+hi Keyword              guifg=#DE98FF gui=none " def end
+hi String               guifg=#45D353 guibg=#161616 gui=none
 hi Operator             guifg=#FF0000
-hi Regexp               guifg=#fb61e7 gui=none
-hi Variable             guifg=#55e4ff gui=none " ivars
-hi rubyConstant         guifg=#ffc52e gui=none
+hi Regexp               guifg=#FB61E7 gui=none
+hi Variable             guifg=#55E4FF gui=none " ivars
+hi rubyConstant         guifg=#FFC52E gui=none
 " hi rubyConstant         guifg=#FFFF00 gui=none
 hi javascriptIdentifier guifg=#FF7D00 gui=none
 hi javascriptType       guifg=#E7E709 gui=none
-hi rubyMethod           guifg=#b7bbff gui=none " attr_accessor, private, protected
-hi railsMethod          guifg=#fd8e8e gui=none " around_filter, before_filter, render, form_tag
-hi rubySymbol           guifg=#c4ff97 gui=none
+hi rubyMethod           guifg=#B7BBFF gui=none " attr_accessor, private, protected
+hi rubySymbol           guifg=#C4FF97 gui=none
+hi railsMethod          guifg=#867EF4 gui=none " around_filter, before_filter, render, form_tag
 
-hi rubyRailsARMethod            guifg=#99FF00 gui=none
-hi rubyRailsARAssociationMethod guifg=#99FF00 gui=none
-hi rubyRailsARCallbackMethod    guifg=#99FF00 gui=none
-hi rubyRailsARClassMethod       guifg=#99FF00 gui=none
-hi rubyRailsARValidationMethod  guifg=#99FF00 gui=none
+hi rubyRailsARMethod            guifg=#867EF4 gui=none
+hi rubyRailsARAssociationMethod guifg=#867EF4 gui=none " belongs_to, has_many, has_one
+hi rubyRailsARValidationMethod  guifg=#867EF4 gui=none " validates
+hi rubyRailsARCallbackMethod    guifg=#867EF4 gui=none
+hi rubyRailsARClassMethod       guifg=#867EF4 gui=none
 
 hi link rubyInterpolation Number
 
