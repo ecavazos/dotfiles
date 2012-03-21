@@ -29,12 +29,7 @@ set visualbell            " visual beep
 " -------------------------------------------------------------------------
 
 syntax enable
-set background=dark
-
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-
-colorscheme solarized
+colorscheme fixxx
 
 " -------------------------------------------------------------------------
 " Text Editor
@@ -219,7 +214,7 @@ let g:AutoCloseProtectedRegions = ["Character"]
 " -------------------------------------------------------------------------
 
 map <leader>v :sp ~/.vimrc<CR>
-map <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+map <leader>V :source ~/.vimrc<CR> :source ~/.gvimrc<CR> :filetype detect<CR> :exe ":echo 'vimrc reloaded'"<CR>
 
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
