@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+time        = Time.now.strftime '%Y%m%d%H%M%S'
+source      = '~/code'
+destination = File.expand_path '../../Dropbox', __FILE__
+archive     = "code_#{ time }.tar.gz"
+archpath    = [destination, archive].join '/'
+
+# tar -cvzf
+puts "tar -czf #{ archpath } #{ source }"
+system "tar -czf #{ archpath } #{ source }"
+
+size = File.stat(archpath).size / (1024.0 * 1024.0)
+puts "Finished archiving '#{ archive }' (#{ '%.2f' % size }MB)"
+
+# clean up old archives
+Dir.chdir destination do
+  Dir.glob('code_*.tar.gz').each do |file|
+    next if file.include? archive
+    puts "Removing '#{ file }'"
+    FileUtils.rm file
+  end
+end
+

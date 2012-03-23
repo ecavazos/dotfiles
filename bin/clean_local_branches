@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+branches = %x(git fetch origin && git branch --merged master)
+exclude  = /master|am-test|production|staging/
+
+deletable = branches.split("\n").select { |branch| branch.strip !~ exclude }
+
+if deletable.empty?
+  puts 'nothing to delete :('
+else
+  deletable.each { |branch| p %x(git branch -d #{ branch.strip }) }
+end
+

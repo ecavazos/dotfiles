@@ -5,3 +5,4 @@ rm $HOME/.vimrc
 rm $HOME/.vim
 rm $HOME/.zshrc
 rm $HOME/.zsh
+rm $HOME/.bin

@@ -1,4 +1,6 @@
-alias code="cd ~/Dropbox/code/"
+alias c="cd ~/code/alchemy"
+alias w="cd ~/code/work"
+alias d="cd ~/code/alchemy/dotfiles"
 
 alias be="bundle exec"
 alias rs="be rspec"
@@ -21,8 +23,8 @@ alias md="mongod run --config /usr/local/Cellar/mongodb/1.4.3-x86_64/mongod.conf
 # -------------------------------------------------------------------------
 
 # open zshrc in editor
-alias prof='$EDITOR ~/.zshrc'
+alias pr='$EDITOR ~/.zshrc'
 
 # reload zshrc
-alias rprof='. ~/.zshrc'
+alias sp='source ~/.zshrc'
 

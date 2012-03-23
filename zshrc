@@ -12,7 +12,7 @@ setopt auto_cd
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
 # add my bin path
-export PATH="/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.bin:/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 export ARCHFLAGS="-arch x86_64"
 export LANG="en_us.UTF-8"
@@ -40,13 +40,7 @@ fi
 # bindkey -v
 
 # use incremental search
-bindkey ^R history-incremental-search-backward
-
-# expand functions in the prompt
-setopt prompt_subst
-
-# set prompt
-PROMPT='%{$reset_color%}`git-prompt`%(!.#.>) '
+bindkey '^R' history-incremental-search-backward
 
 # ignore duplicate history entries
 setopt histignoredups
@@ -55,17 +49,6 @@ setopt histignoredups
 export HISTSIZE=100000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
-
-# Knife: knife-staging status
-knife-office() {
-  knife $* -c ~/.chef/knife.office.rb
-}
-knife-staging() {
-  knife $* -c ~/.chef/knife.staging.rb
-}
-knife-staging() {
-  knife $* -c ~/.chef/knife.production.rb
-}
 
 # rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
