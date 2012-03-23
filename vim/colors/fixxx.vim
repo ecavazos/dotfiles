@@ -49,7 +49,7 @@ hi Todo                 guifg=#87D350 guibg=#171717 gui=italic
 hi Constant             guifg=#87D350 gui=none " self
 hi Number               guifg=#FFD07F gui=none
 hi Identifier           guifg=#FC63C4 gui=none " ctrl-p matches, block vars
-hi Type                 guifg=#67a2f0 gui=none " class names
+hi Type                 guifg=#67A2F0 gui=none " class names
 hi Statement            guifg=#91CAFF gui=none " if, return, unless, begin, recue
 hi PreProc              guifg=#B7BBFF gui=none
 hi Function             guifg=#FCC9FF gui=none
@@ -59,12 +59,14 @@ hi String               guifg=#45D353 guibg=#161616 gui=none
 hi Operator             guifg=#FF0000
 hi Regexp               guifg=#FB61E7 gui=none
 hi Variable             guifg=#55E4FF gui=none " ivars
-hi rubyConstant         guifg=#FFC52E gui=none
+hi rubyConstant         guifg=#67A2F0 gui=none
+" FFC52E
 " hi rubyConstant         guifg=#FFFF00 gui=none
 hi javascriptIdentifier guifg=#FF7D00 gui=none
 hi javascriptType       guifg=#E7E709 gui=none
 hi rubyMethod           guifg=#B7BBFF gui=none " attr_accessor, private, protected
-hi rubySymbol           guifg=#C4FF97 gui=none
+hi rubySymbol           guifg=#fffc68 gui=none
+hi rubyInterpolation    guifg=#BFDDA6 gui=none
 hi railsMethod          guifg=#867EF4 gui=none " around_filter, before_filter, render, form_tag
 
 hi rubyRailsARMethod            guifg=#867EF4 gui=none
@@ -73,7 +75,6 @@ hi rubyRailsARValidationMethod  guifg=#867EF4 gui=none " validates
 hi rubyRailsARCallbackMethod    guifg=#867EF4 gui=none
 hi rubyRailsARClassMethod       guifg=#867EF4 gui=none
 
-hi link rubyInterpolation Number
 
 hi link railsUserMethod         PreProc
 hi link rubyRegexp              Regexp
