@@ -3,8 +3,8 @@ setopt prompt_subst
 
 function ruby_version() {
   ver=$(rvm current | sed 's/-[^-]*$//')
-  color=$fg_bold[green]
-  echo "%{$color%}$ver%{$reset_color%}"
+  clr=$fg_bold[green]
+  echo "%{$clr%}$ver%{$reset_color%}"
 }
 
 # set prompt
