@@ -1,5 +1,5 @@
 [color]
-    ui = auto
+  ui = auto
 
 [color "branch"]
   current = yellow reverse
@@ -32,6 +32,7 @@
   br      = branch
   co      = checkout
   df      = diff
+  l       = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
   lg      = log -p
   lol     = log --graph --decorate --pretty --oneline --abbrev-commit
   lola    = log --graph --decorate --pretty --oneline --abbrev-commit --all
