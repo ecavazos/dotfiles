@@ -5,6 +5,8 @@ alias d='cd ~/code/alchemy/dotfiles'
 alias be='bundle exec'
 alias rs='be rspec'
 
+alias up='cd ..'
+
 alias migrate='be rake db:migrate db:test:prepare'
 alias remigrate='be rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare'
 alias remongrate='be rake mongoid:migrate && rake mongoid:migrate:redo'
