@@ -168,8 +168,11 @@ map gr :Grep -rin
 au FileType ruby,coffee noremap <silent> ,c :s/^/#<cr> :noh<cr>
 au FileType ruby,coffee noremap <silent> ,u :s/^#/<cr> :noh<cr>
 
-au FileType javascript noremap <silent> ,c :s/^/\/\/<cr>
-au FileType javascript noremap <silent> ,u :s/^\/\//<cr>
+au FileType javascript noremap <silent> ,c :s/^/\/\/<cr> :noh<cr>
+au FileType javascript noremap <silent> ,u :s/^\/\//<cr> :noh<cr>
+
+au FileType haml noremap <silent> ,c :s/^/-#<cr> :noh<cr>
+au FileType haml noremap <silent> ,u :s/^-#/<cr> :noh<cr>
 
 " -------------------------------------------------------------------------
 " NERDTree
