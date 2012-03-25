@@ -5,6 +5,9 @@ alias d='cd ~/code/alchemy/dotfiles'
 alias be='bundle exec'
 alias rs='be rspec'
 
+alias 193='rvm use 1.9.3-p125'
+alias def='rvm use default'
+
 alias up='cd ..'
 
 alias migrate='be rake db:migrate db:test:prepare'
