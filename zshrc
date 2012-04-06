@@ -12,7 +12,7 @@ setopt auto_cd
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
 # add my bin path
-export PATH="$HOME/.bin:/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.bin:$HOME/.rbenv/bin:/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 export ARCHFLAGS="-arch x86_64"
 export LANG="en_us.UTF-8"
@@ -27,7 +27,7 @@ export RUBYOPT="rubygems"
 export EDITOR=mvim
 
 # use macvim as git editor
-export GIT_EDITOR='$EDITOR -f -c"au VimLeave * !open -a Terminal"'
+export GIT_EDITOR="$EDITOR -v"
 
 # source additional config files
 if [[ $SHLVL < 3 ]]; then
@@ -35,9 +35,6 @@ if [[ $SHLVL < 3 ]]; then
     source $f
   done
 fi
-
-# vi mode
-# bindkey -v
 
 # use incremental search
 bindkey '^R' history-incremental-search-backward
@@ -50,5 +47,5 @@ export HISTSIZE=100000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
-# rvm
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+eval "$(rbenv init -)"
+

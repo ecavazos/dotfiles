@@ -2,7 +2,7 @@
 setopt prompt_subst
 
 function ruby_version() {
-  ver=$(rvm current | sed 's/-[^-]*$//')
+  ver=$(rbenv version | sed 's/-[^-]*$//')
   clr=$fg_bold[green]
   echo "%{$clr%}$ver%{$reset_color%}"
 }

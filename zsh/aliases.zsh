@@ -5,8 +5,8 @@ alias d='cd ~/code/alchemy/dotfiles'
 alias be='bundle exec'
 alias rs='be rspec'
 
-alias 193='rvm use 1.9.3-p125'
-alias def='rvm use default'
+alias 193='rbenv global 1.9.3-p125'
+alias 187='rbenv global ree-1.8.7-2012.02'
 
 alias up='cd ..'
 
