@@ -6,8 +6,12 @@ exclude  = /master|am-test|production|staging/
 deletable = branches.split("\n").select { |branch| branch.strip !~ exclude }
 
 if deletable.empty?
-  puts 'nothing to delete :('
+  puts 'There are no branches to delete :('
 else
-  deletable.each { |branch| p %x(git branch -d #{ branch.strip }) }
+  deletable.each do |branch|
+    del_local = "git branch -d #{ branch.strip }"
+    puts del_local
+    puts %x(#{ del_local })
+  end
 end
 

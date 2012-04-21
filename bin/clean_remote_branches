@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+branches = %x(git fetch origin && git branch -r --merged master)
+exclude  = /master|am-test|production|staging|HEAD/
+
+branches = branches.split("\n").map do |branch|
+  branch.strip.gsub('origin/', '')
+end
+
+deletable = branches.select { |branch| branch !~ exclude }
+
+if deletable.empty?
+  puts 'There are no branches to delete :('
+else
+  deletable.each do |branch|
+    del_remote = "git push origin :#{ branch }"
+    puts del_remote
+    puts %x(#{ del_remote })
+  end
+end
+
+# sometimes you need to run this first
+# git remote prune origin
+
