@@ -4,15 +4,13 @@ set transparency=12
 " GUI
 " -------------------------------------------------------------------------
 
-if has("gui_running")
-    " set guioptions=egmrt
-    set guioptions+=e " No gui-like tabs
-    set guioptions+=g " Grey inactive menu items
-    set guioptions+=t " Include tearoff menu items
-    set guioptions-=T " No toolbar
-    set guioptions-=m " No menubar
-    set guioptions-=r " Right scroolbar
-endif
+" set guioptions=egmrt
+set guioptions+=e " No gui-like tabs
+set guioptions+=g " Grey inactive menu items
+set guioptions+=t " Include tearoff menu items
+set guioptions-=T " No toolbar
+set guioptions-=m " No menubar
+set guioptions-=r " Right scroolbar
 
 " -------------------------------------------------------------------------
 " Tab Navigation :: Normal Mode
@@ -42,4 +40,10 @@ map! <D-7> <C-O>:tabn 7<CR>
 map! <D-8> <C-O>:tabn 8<CR>
 map! <D-9> <C-O>:tabn 9<CR>
 
+" -------------------------------------------------------------------------
+" vroom.vim
+" https://github.com/skalnik/vim-vroom
+" -------------------------------------------------------------------------
+
+let g:vroom_use_colors = 1
 

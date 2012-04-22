@@ -21,7 +21,7 @@ set incsearch             " find the next match as we type the search
 set hlsearch              " highlight searches by default
 set nowrap                " don't wrap lines
 set linebreak             " wrap lines at convenient points
-set autoread              " reload changes
+set autoread              " reload external changes
 set visualbell            " visual beep
 
 " -------------------------------------------------------------------------
@@ -65,12 +65,12 @@ set nofoldenable          "don't fold by default
 " -------------------------------------------------------------------------
 
 set laststatus=2
-set ruler                             " show cursor position
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+set ruler " show cursor position
+set statusline=%<\ %n:%f\ %m%r%y%=%-35.(ln:\ %l\ of\ %L,\ co:\ %c%V\ (%P)%)
 
-set wildmode=list:longest   "make cmdline tab completion similar to bash
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildmode=list:longest   " make cmdline tab completion similar to bash
+set wildmenu                " enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
 
 " Display tabs and trailing spaces
 set list
@@ -99,18 +99,11 @@ set hidden
 " Mappings
 " -------------------------------------------------------------------------
 
-" Make <c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
-
 " Get out of insert mode
 inoremap kj <Esc>
 
 " Get out of insert mode and save
 inoremap <silent> lkj <Esc> :w<cr><bs>
-
-" Map to bufexplorer
-nnoremap <C-B> :BufExplorer<cr>
 
 " Map Q to something useful
 noremap Q gq
@@ -162,17 +155,22 @@ set smartcase
 map gr :Grep -rin 
 
 " -------------------------------------------------------------------------
-" Comments
+" NERDCommenter
 " -------------------------------------------------------------------------
 
-au FileType ruby,coffee noremap <silent> ,c :s/^/#<cr> :noh<cr>
-au FileType ruby,coffee noremap <silent> ,u :s/^#/<cr> :noh<cr>
+let NERDSpaceDelims = 1
 
-au FileType javascript noremap <silent> ,c :s/^/\/\/<cr> :noh<cr>
-au FileType javascript noremap <silent> ,u :s/^\/\//<cr> :noh<cr>
+map <silent> <D-/> <plug>NERDCommenterToggle
+map <silent> <leader>c <plug>NERDCommenterComment
+map <silent> <leader>u <plug>NERDCommenterInvert
+"au FileType ruby,coffee noremap <silent> ,c :s/^/#<cr> :noh<cr>
+"au FileType ruby,coffee noremap <silent> ,u :s/^#/<cr> :noh<cr>
 
-au FileType haml noremap <silent> ,c :s/^/-#<cr> :noh<cr>
-au FileType haml noremap <silent> ,u :s/^-#/<cr> :noh<cr>
+"au FileType javascript noremap <silent> ,c :s/^/\/\/<cr> :noh<cr>
+"au FileType javascript noremap <silent> ,u :s/^\/\//<cr> :noh<cr>
+
+"au FileType haml noremap <silent> ,c :s/^/-#<cr> :noh<cr>
+"au FileType haml noremap <silent> ,u :s/^-#/<cr> :noh<cr>
 
 " -------------------------------------------------------------------------
 " NERDTree
@@ -192,23 +190,13 @@ map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 " https://github.com/kien/ctrlp.vim
 " -------------------------------------------------------------------------
 
-map <leader>t :CtrlP<cr>
-map <leader>b :CtrlPBuffer<cr> " search in open buffers
+map <leader>b :CtrlPBuffer<CR> " search in open buffers
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " -------------------------------------------------------------------------
-" Specky
+" AutoClose
 " -------------------------------------------------------------------------
 
-let g:speckyQuoteSwitcherKey = "<C-S>'"
-let g:speckyRunRdocKey = "<C-S>r"
-let g:speckySpecSwitcherKey = "<C-S>x"
-let g:speckyRunSpecKey = "<C-S>s"
-let g:speckyRunSpecCmd = "spec -fs"
-let g:speckyRunRdocCmd = "fri -L -f plain"
-
-
-"Adding #{} to AutoClose Plugin and activating it for String interpolation
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}'}
 let g:AutoCloseProtectedRegions = ["Character"]
 
@@ -221,6 +209,15 @@ map <leader>V :source ~/.vimrc<CR> :source ~/.gvimrc<CR> :filetype detect<CR> :e
 
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
+
+" -------------------------------------------------------------------------
+" Open relative files
+" -------------------------------------------------------------------------
+
+let currdir = expand('%:h') . '/'
+map <leader>e :e <C-R>=currdir<CR>
+map <leader>t :tabe <C-R>=currdir<CR>
+map <leader>s :sp <C-R>=currdir<CR>
 
 " -------------------------------------------------------------------------
 " Tidy
