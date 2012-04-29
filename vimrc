@@ -118,8 +118,8 @@ map <C-K> <C-W>k
 map <C-L> <C-W>l
 
 " Quickly move between prev/next buffers
-:noremap <left>  :bp<CR>
-:noremap <right> :bn<CR>
+" :noremap <left>  :bp<CR>
+" :noremap <right> :bn<CR>
 
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
