@@ -9,7 +9,7 @@ archive     = "code_#{ time }.tar.gz"
 archpath    = [destination, archive].join '/'
 
 # tar -cvzf
-puts "tar -czf #{ archpath } #{ source }"
+puts   "tar -czf #{ archpath } #{ source }"
 system "tar -czf #{ archpath } #{ source }"
 
 size = File.stat(archpath).size / (1024.0 * 1024.0)

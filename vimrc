@@ -23,22 +23,20 @@ set nowrap                " don't wrap lines
 set linebreak             " wrap lines at convenient points
 set autoread              " reload external changes
 set visualbell            " visual beep
+set clipboard=unnamed     " use system clipboard
 
 " -------------------------------------------------------------------------
 " Colors
 " -------------------------------------------------------------------------
 
 syntax enable
-colorscheme fixxx
+colorscheme fixxx_console
+set t_Co=256
 
 " -------------------------------------------------------------------------
 " Text Editor
 " -------------------------------------------------------------------------
 
-"set lines=42
-"set columns=120
-"set formatoptions=tcqw
-"set tw=80
 set lbr
 set gfn=Inconsolata:h20.00    " font and size
 set smartindent
@@ -118,8 +116,9 @@ map <C-K> <C-W>k
 map <C-L> <C-W>l
 
 " Quickly move between prev/next buffers
-" :noremap <left>  :bp<CR>
-" :noremap <right> :bn<CR>
+:noremap <leader>a :bp<CR>
+:noremap <leader>f :bn<CR>
+:noremap <leader>d :bd<CR>
 
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
@@ -139,7 +138,7 @@ let g:rails_statusline=0
 
 if exists('+colorcolumn')
   set colorcolumn=80
-  hi ColorColumn guibg=#300000
+  hi ColorColumn guibg=#300000 ctermbg=52
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
@@ -161,6 +160,7 @@ map gr :Grep -rin
 let NERDSpaceDelims = 1
 
 map <silent> <D-/> <plug>NERDCommenterToggle
+map <silent> <leader>m <plug>NERDCommenterToggle
 map <silent> <leader>c <plug>NERDCommenterComment
 map <silent> <leader>u <plug>NERDCommenterInvert
 "au FileType ruby,coffee noremap <silent> ,c :s/^/#<cr> :noh<cr>
