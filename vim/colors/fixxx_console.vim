@@ -33,7 +33,7 @@ hi Normal               ctermfg=231 ctermbg=233  cterm=NONE      guifg=#FFFAFA g
 hi LineNr               ctermfg=238 ctermbg=234  cterm=NONE      guifg=#38475f guibg=#181818 gui=none
 
 hi ErrorMsg             ctermfg=1   ctermbg=NONE cterm=NONE      guifg=NONE    guibg=#E93600 gui=none
-hi SpellBad             ctermfg=124 ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
+hi SpellBad             ctermfg=197 ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
 hi SpellLocal           ctermfg=178 ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
 hi Search               ctermfg=16  ctermbg=185  cterm=NONE      guifg=#D2F72D guibg=#06000A gui=underline
 
@@ -42,7 +42,7 @@ hi Comment              ctermfg=243  ctermbg=NONE cterm=NONE     guifg=#B0C5B8 g
 hi Todo                 ctermfg=2    ctermbg=NONE cterm=bold     guifg=#87D350 guibg=#171717 gui=italic
 hi Identifier           ctermfg=205  ctermbg=NONE cterm=NONE     guifg=#FC63C4 guibg=NONE    gui=none    " ctrl-p matches, block vars
 hi Type                 ctermfg=51   ctermbg=NONE cterm=NONE     guifg=#67A2F0 guibg=NONE    gui=none    " class names
-hi Statement            ctermfg=51   ctermbg=NONE cterm=NONE     guifg=#91CAFF guibg=NONE    gui=none    " if, return, unless, begin, recue
+hi Statement            ctermfg=171  ctermbg=NONE cterm=NONE     guifg=#91CAFF guibg=NONE    gui=none    " if, return, unless, begin, recue
 hi Special              ctermfg=205  ctermbg=NONE cterm=NONE     guifg=#FEA400 guibg=NONE    gui=none    " #{}
 hi Keyword              ctermfg=39   ctermbg=NONE cterm=NONE     guifg=#DE98FF guibg=NONE    gui=none    " class, module, def, end
 hi String               ctermfg=47   ctermbg=234  cterm=NONE     guifg=#45D353 guibg=#161616 gui=none

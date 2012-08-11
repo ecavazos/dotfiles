@@ -8,15 +8,14 @@ autoload -U colors && colors
 # automatically enter directories without cd
 setopt auto_cd
 
-# for mysql :(
-export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
-
 # add my bin path
 export PATH="$HOME/.bin:$HOME/.rbenv/bin:/usr/local/lib/node_modules/npm/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
-export ARCHFLAGS="-arch x86_64"
-export LANG="en_us.UTF-8"
-export CC=/usr/bin/gcc-4.2
+# for mysql :(
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+export CC=/usr/local/bin/gcc-4.2
+# export ARCHFLAGS="-arch x86_64"
+# export LANG="en_us.UTF-8"
 
 # always show warnings
 # always load rubygems
