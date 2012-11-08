@@ -46,5 +46,7 @@ export HISTSIZE=100000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
-eval "$(rbenv init -)"
+if type rbenv > /dev/null; then
+  eval "$(rbenv init -)"
+fi
 
