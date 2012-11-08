@@ -2,9 +2,11 @@
 setopt prompt_subst
 
 function ruby_version() {
-  ver=$(rbenv version | sed 's/[  ].*$//')
-  clr=$fg_bold[cyan]
-  echo "%{$clr%}$ver%{$reset_color%}"
+  if type rbenv > /dev/null; then
+    ver=$(rbenv version | sed 's/[  ].*$//')
+    clr=$fg_bold[cyan]
+    echo "%{$clr%}$ver%{$reset_color%}"
+  fi
 }
 
 # set prompt
