@@ -23,7 +23,10 @@ set nowrap                " don't wrap lines
 set linebreak             " wrap lines at convenient points
 set autoread              " reload external changes
 set visualbell            " visual beep
-set clipboard=unnamed     " use system clipboard
+
+if $TMUX == ''
+  set clipboard+=unnamed  " use system clipboard
+end
 
 " -------------------------------------------------------------------------
 " Colors
