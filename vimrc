@@ -58,7 +58,7 @@ set linespace=4
 " -------------------------------------------------------------------------
 
 set foldmethod=indent     "fold based on indent
-"set foldnestmax=3         "deepest fold is 3 levels
+set foldnestmax=3         "deepest fold is 3 levels
 set nofoldenable          "don't fold by default
 
 " -------------------------------------------------------------------------
@@ -75,8 +75,7 @@ set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
 
 " Display tabs and trailing spaces
 set list
-set listchars=tab:▸\ ,eol:¬,trail:⋅,nbsp:⋅
-set showbreak=↪
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 set formatoptions-=o " Don't continue comments when pushing o/O
 
@@ -181,9 +180,10 @@ map <silent> <leader>u <plug>NERDCommenterInvert
 
 let NERDTreeShowBookmarks = 1
 let NERDChristmasTree = 1
-let NERDTreeWinPos = "right"
+let NERDTreeWinPos = "left"
 
-map <leader>n :NERDTreeToggle <cr>
+map <leader>n :NERDTreeToggle<cr>
+map <leader>N :NERDTreeFind<cr>
 
 " Show current file in NERDTree
 map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
@@ -245,4 +245,6 @@ nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
 
 " :retab!  convert tabs to spaces
+
+map <Leader>r :let @+="bundle exec rspec " .@% . ":" . line(".")<CR>
 
