@@ -178,6 +178,7 @@ map <silent> <leader>u <plug>NERDCommenterInvert
 " NERDTree
 " -------------------------------------------------------------------------
 
+let NERDTreeDirArrows=0
 let NERDTreeShowBookmarks = 1
 let NERDChristmasTree = 1
 let NERDTreeWinPos = "left"
