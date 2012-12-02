@@ -23,8 +23,6 @@ alias tlf='tail -f'
 
 alias md='mongod run --config /usr/local/Cellar/mongodb/1.4.3-x86_64/mongod.conf'
 
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-
 # -------------------------------------------------------------------------
 # profile shortcuts
 # -------------------------------------------------------------------------

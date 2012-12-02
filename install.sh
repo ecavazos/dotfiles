@@ -7,4 +7,5 @@ ln -svf $PWD/vim $HOME/.vim
 ln -svf $PWD/zshrc $HOME/.zshrc
 ln -svf $PWD/zsh $HOME/.zsh
 ln -svf $PWD/bin $HOME/.bin
+ln -svf $PWD/tmux.conf $HOME/.tmux.conf
 
