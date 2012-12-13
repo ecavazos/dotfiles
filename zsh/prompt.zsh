@@ -10,6 +10,6 @@ function ruby_version() {
 }
 
 # set prompt
-PROMPT='%{$fg_bold[magenta]%}[%~]:%{$fg_bold[green]%} $%{$reset_color%}'
+PROMPT='%{$fg_bold[magenta]%}[%~]:%{$fg_bold[green]%} $ %{$reset_color%}'
 RPROMPT='`ruby_version``git-prompt`%{$reset_color%}'
 
