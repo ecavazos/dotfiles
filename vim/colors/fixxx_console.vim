@@ -29,34 +29,37 @@ endif
 
 " General colors
 hi Cursor               ctermfg=16   ctermbg=231  cterm=NONE      guifg=#000000 guibg=#FFFFFF gui=none
-hi Normal               ctermfg=231  ctermbg=233  cterm=NONE      guifg=#FFFAFA guibg=#06000A gui=none
+hi Normal               ctermfg=255  ctermbg=233  cterm=NONE      guifg=#FFFAFA guibg=#06000A gui=none
 hi LineNr               ctermfg=238  ctermbg=234  cterm=NONE      guifg=#38475f guibg=#181818 gui=none
 
 hi ErrorMsg             ctermfg=1    ctermbg=NONE cterm=NONE      guifg=NONE    guibg=#E93600 gui=none
-hi SpellBad             ctermfg=208  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
-hi SpellRare            ctermfg=226  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
-hi SpellLocal           ctermfg=178  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
 hi Search               ctermfg=16   ctermbg=185  cterm=NONE      guifg=#D2F72D guibg=#06000A gui=underline
 
+hi clear SpellBad
+hi SpellBad             ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
+hi SpellRare            ctermfg=226  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
+hi SpellLocal           ctermfg=178  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
+
+
 " Syntax highlighting
-hi Comment              ctermfg=243  ctermbg=NONE cterm=NONE     guifg=#B0C5B8 guibg=#171717 gui=italic
+hi Comment              ctermfg=240  ctermbg=234  cterm=NONE     guifg=#B0C5B8 guibg=#171717 gui=italic
 hi Todo                 ctermfg=2    ctermbg=NONE cterm=bold     guifg=#87D350 guibg=#171717 gui=italic
-hi Identifier           ctermfg=121  ctermbg=NONE cterm=NONE     guifg=#FC63C4 guibg=NONE    gui=none    " ctrl-p matches, block vars
+hi Identifier           ctermfg=141  ctermbg=NONE cterm=NONE     guifg=#FC63C4 guibg=NONE    gui=none    " ctrl-p matches, block vars
 hi Type                 ctermfg=155  ctermbg=NONE cterm=NONE     guifg=#67A2F0 guibg=NONE    gui=none    " class names, ctermfg
 hi Statement            ctermfg=183  ctermbg=NONE cterm=NONE     guifg=#91CAFF guibg=NONE    gui=none    " if, return, unless, begin, recue
 hi Special              ctermfg=111  ctermbg=NONE cterm=NONE     guifg=#FEA400 guibg=NONE    gui=none    " #{}, <leader, <CR>
-hi Keyword              ctermfg=75   ctermbg=NONE cterm=NONE     guifg=#DE98FF guibg=NONE    gui=none    " class, module, def, end
-hi String               ctermfg=47   ctermbg=234  cterm=NONE     guifg=#45D353 guibg=#161616 gui=none
-hi Constant             ctermfg=13   ctermbg=NONE cterm=NONE     guifg=#87D350 guibg=NONE    gui=none    " self
-hi Function             ctermfg=117  ctermbg=NONE cterm=NONE     guifg=#FCC9FF guibg=NONE    gui=none
+hi Keyword              ctermfg=183  ctermbg=NONE cterm=NONE     guifg=#DE98FF guibg=NONE    gui=none    " class, module, def, end
+hi String               ctermfg=75   ctermbg=NONE cterm=NONE     guifg=#45D353 guibg=#161616 gui=none
+hi Constant             ctermfg=119  ctermbg=NONE cterm=NONE     guifg=#87D350 guibg=NONE    gui=none    " self, nil, numbers
+hi Function             ctermfg=147  ctermbg=NONE cterm=NONE     guifg=#FCC9FF guibg=NONE    gui=none
 hi PreProc              ctermfg=250  ctermbg=NONE cterm=NONE     guifg=NONE    guibg=NONE    gui=none    " #!, #include
 hi Regexp               ctermfg=190  ctermbg=NONE cterm=NONE     guifg=#FB61E7 gui=none
 hi Visual               ctermfg=231  ctermbg=57   cterm=NONE     guifg=#FFEBFB guibg=#2c3942 gui=none
-hi Variable             ctermfg=154  ctermbg=NONE cterm=NONE     guifg=#55E4FF guibg=NONE    gui=none    " ivars
-hi rubyConstant         ctermfg=33   ctermbg=NONE cterm=NONE     guifg=#67A2F0 guibg=NONE    gui=none   " ruby class names
+hi Variable             ctermfg=141  ctermbg=NONE cterm=NONE     guifg=#55E4FF guibg=NONE    gui=none    " ivars
+hi rubyConstant         ctermfg=13   ctermbg=NONE cterm=bold     guifg=#67A2F0 guibg=NONE    gui=none    " ruby class names
 hi rubyMethod           ctermfg=190  ctermbg=NONE cterm=NONE     guifg=#B7BBFF guibg=NONE    gui=none    " require, attr_accessor, private, protected
-hi rubySymbol           ctermfg=156  ctermbg=NONE cterm=NONE     guifg=#fffc68 guibg=NONE    gui=none
-hi rubyInterpolation    ctermfg=182  ctermbg=NONE cterm=NONE     guifg=#BFDDA6 guibg=NONE    gui=none
+hi rubySymbol           ctermfg=159  ctermbg=NONE cterm=NONE     guifg=#fffc68 guibg=NONE    gui=none
+hi rubyInterpolation    ctermfg=109  ctermbg=NONE cterm=NONE     guifg=#BFDDA6 guibg=NONE    gui=none
 hi railsMethod          ctermfg=75   ctermbg=NONE cterm=NONE     guifg=#867EF4 guibg=NONE    gui=none    " delegate, around_filter, before_filter, render, form_tag
 hi rubyRailsARMethod    ctermfg=159  ctermbg=NONE cterm=NONE     guifg=#867EF4 guibg=NONE    gui=none
 
