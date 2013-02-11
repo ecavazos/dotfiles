@@ -21,37 +21,39 @@ if version >= 700
   hi CursorColumn guibg=#181818
   hi MatchParen   guifg=#DFCA00 guibg=#06000A gui=bold
   hi Pmenu        guifg=#FFFFFF guibg=#252525
-  hi PmenuSel     guifg=#FAC539 guibg=#000000
+  hi Pmenu        ctermfg=15   ctermbg=234  cterm=NONE guifg=#FFFFFF guibg=#252525
+  hi PmenuSel     ctermfg=0    ctermbg=227  cterm=NONE guifg=#FAC539 guibg=#000000
 endif
 
 " TODO: fix plain text color in html files
 
-
 " General colors
-hi Cursor               ctermfg=16  ctermbg=231  cterm=NONE      guifg=#000000 guibg=#FFFFFF gui=none
-hi Normal               ctermfg=231 ctermbg=233  cterm=NONE      guifg=#FFFAFA guibg=#06000A gui=none
-hi LineNr               ctermfg=238 ctermbg=234  cterm=NONE      guifg=#38475f guibg=#181818 gui=none
+hi Cursor               ctermfg=16   ctermbg=231  cterm=NONE      guifg=#000000 guibg=#FFFFFF gui=none
+hi Normal               ctermfg=231  ctermbg=233  cterm=NONE      guifg=#FFFAFA guibg=#06000A gui=none
+hi LineNr               ctermfg=238  ctermbg=234  cterm=NONE      guifg=#38475f guibg=#181818 gui=none
 
-hi ErrorMsg             ctermfg=1   ctermbg=NONE cterm=NONE      guifg=NONE    guibg=#E93600 gui=none
-hi SpellBad             ctermfg=197 ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
-hi SpellLocal           ctermfg=178 ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
-hi Search               ctermfg=16  ctermbg=185  cterm=NONE      guifg=#D2F72D guibg=#06000A gui=underline
+hi ErrorMsg             ctermfg=1    ctermbg=NONE cterm=NONE      guifg=NONE    guibg=#E93600 gui=none
+hi SpellBad             ctermfg=208  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
+hi SpellRare            ctermfg=226  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
+hi SpellLocal           ctermfg=178  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
+hi Search               ctermfg=16   ctermbg=185  cterm=NONE      guifg=#D2F72D guibg=#06000A gui=underline
 
 " Syntax highlighting
 hi Comment              ctermfg=243  ctermbg=NONE cterm=NONE     guifg=#B0C5B8 guibg=#171717 gui=italic
 hi Todo                 ctermfg=2    ctermbg=NONE cterm=bold     guifg=#87D350 guibg=#171717 gui=italic
-hi Identifier           ctermfg=205  ctermbg=NONE cterm=NONE     guifg=#FC63C4 guibg=NONE    gui=none    " ctrl-p matches, block vars
-hi Type                 ctermfg=51   ctermbg=NONE cterm=NONE     guifg=#67A2F0 guibg=NONE    gui=none    " class names
-hi Statement            ctermfg=171  ctermbg=NONE cterm=NONE     guifg=#91CAFF guibg=NONE    gui=none    " if, return, unless, begin, recue
-hi Special              ctermfg=205  ctermbg=NONE cterm=NONE     guifg=#FEA400 guibg=NONE    gui=none    " #{}
-hi Keyword              ctermfg=39   ctermbg=NONE cterm=NONE     guifg=#DE98FF guibg=NONE    gui=none    " class, module, def, end
+hi Identifier           ctermfg=121  ctermbg=NONE cterm=NONE     guifg=#FC63C4 guibg=NONE    gui=none    " ctrl-p matches, block vars
+hi Type                 ctermfg=155  ctermbg=NONE cterm=NONE     guifg=#67A2F0 guibg=NONE    gui=none    " class names, ctermfg
+hi Statement            ctermfg=183  ctermbg=NONE cterm=NONE     guifg=#91CAFF guibg=NONE    gui=none    " if, return, unless, begin, recue
+hi Special              ctermfg=111  ctermbg=NONE cterm=NONE     guifg=#FEA400 guibg=NONE    gui=none    " #{}, <leader, <CR>
+hi Keyword              ctermfg=75   ctermbg=NONE cterm=NONE     guifg=#DE98FF guibg=NONE    gui=none    " class, module, def, end
 hi String               ctermfg=47   ctermbg=234  cterm=NONE     guifg=#45D353 guibg=#161616 gui=none
 hi Constant             ctermfg=13   ctermbg=NONE cterm=NONE     guifg=#87D350 guibg=NONE    gui=none    " self
 hi Function             ctermfg=117  ctermbg=NONE cterm=NONE     guifg=#FCC9FF guibg=NONE    gui=none
+hi PreProc              ctermfg=250  ctermbg=NONE cterm=NONE     guifg=NONE    guibg=NONE    gui=none    " #!, #include
 hi Regexp               ctermfg=190  ctermbg=NONE cterm=NONE     guifg=#FB61E7 gui=none
-hi Visual               ctermfg=153  ctermbg=54   cterm=NONE     guifg=#FFEBFB guibg=#2c3942 gui=none
+hi Visual               ctermfg=231  ctermbg=57   cterm=NONE     guifg=#FFEBFB guibg=#2c3942 gui=none
 hi Variable             ctermfg=154  ctermbg=NONE cterm=NONE     guifg=#55E4FF guibg=NONE    gui=none    " ivars
-hi rubyConstant         ctermfg=51   ctermbg=NONE cterm=NONE     guifg=#67A2F0 guibg=NONE    gui=none
+hi rubyConstant         ctermfg=33   ctermbg=NONE cterm=NONE     guifg=#67A2F0 guibg=NONE    gui=none   " ruby class names
 hi rubyMethod           ctermfg=190  ctermbg=NONE cterm=NONE     guifg=#B7BBFF guibg=NONE    gui=none    " require, attr_accessor, private, protected
 hi rubySymbol           ctermfg=156  ctermbg=NONE cterm=NONE     guifg=#fffc68 guibg=NONE    gui=none
 hi rubyInterpolation    ctermfg=182  ctermbg=NONE cterm=NONE     guifg=#BFDDA6 guibg=NONE    gui=none
@@ -71,7 +73,6 @@ hi rubyRailsARMethod    ctermfg=159  ctermbg=NONE cterm=NONE     guifg=#867EF4 g
 " hi SpecialKey     guifg=#FF0000 guibg=#323232 gui=none
 
 " hi Number               guifg=#FFD07F gui=none
-" hi PreProc              guifg=#B7BBFF gui=none
 " hi Operator             guifg=#FF0000
 " hi javascriptIdentifier guifg=#FF7D00 gui=none
 " hi javascriptType       guifg=#E7E709 gui=none

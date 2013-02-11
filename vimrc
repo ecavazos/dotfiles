@@ -41,15 +41,15 @@ set t_Co=256
 " -------------------------------------------------------------------------
 
 set lbr
-set gfn=Inconsolata:h20.00    " font and size
+set gfn=Inconsolata:h20.00 " font and size
 set smartindent
 set number
 set cursorline
-set ts=2                      " tabs are 2 spaces
+set ts=2                   " tabs are 2 spaces
 set softtabstop=2
-set bs=2                      " backspace over everything in insert mode
+set bs=2                   " backspace over everything in insert mode
 set expandtab
-set shiftwidth=2              " Tabs under smart indent
+set shiftwidth=2           " Tabs under smart indent
 set linespace=4
 
 
@@ -75,7 +75,7 @@ set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
 
 " Display tabs and trailing spaces
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set listchars=tab:>>,trail:.,extends:#,nbsp:?
 
 set formatoptions-=o " Don't continue comments when pushing o/O
 
@@ -103,7 +103,7 @@ set hidden
 inoremap kj <Esc>
 
 " Get out of insert mode and save
-inoremap <silent> lkj <Esc> :w<cr><bs>
+" inoremap <silent> lkj <Esc> :w<cr><bs>
 
 " Map Q to something useful
 noremap Q gq
@@ -153,7 +153,7 @@ set smartcase
 " Grep.vim
 " -------------------------------------------------------------------------
 
-map gr :Grep -rin 
+map gr :Grep -rin
 
 " -------------------------------------------------------------------------
 " NERDCommenter
@@ -240,10 +240,10 @@ function! Preserve(command)
 endfunction
 
 " remove trailing white spaces
-nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nmap <leader>w :call Preserve("%s/\\s\\+$//e")<CR>
 
 " tidy whitespace
-nmap _= :call Preserve("normal gg=G")<CR>
+nmap <leader>q :call Preserve("normal gg=G")<CR>
 
 " :retab!  convert tabs to spaces
 
