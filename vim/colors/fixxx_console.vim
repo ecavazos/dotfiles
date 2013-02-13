@@ -42,7 +42,7 @@ hi SpellLocal           ctermfg=178  ctermbg=NONE cterm=underline guifg=NONE    
 
 
 " Syntax highlighting
-hi Comment              ctermfg=240  ctermbg=234  cterm=NONE     guifg=#B0C5B8 guibg=#171717 gui=italic
+hi Comment              ctermfg=244  ctermbg=234  cterm=NONE     guifg=#B0C5B8 guibg=#171717 gui=italic
 hi Todo                 ctermfg=2    ctermbg=NONE cterm=bold     guifg=#87D350 guibg=#171717 gui=italic
 hi Identifier           ctermfg=141  ctermbg=NONE cterm=NONE     guifg=#FC63C4 guibg=NONE    gui=none    " ctrl-p matches, block vars
 hi Type                 ctermfg=155  ctermbg=NONE cterm=NONE     guifg=#67A2F0 guibg=NONE    gui=none    " class names, ctermfg
