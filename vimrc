@@ -42,9 +42,9 @@ set t_Co=256
 
 set lbr
 set gfn=Inconsolata:h20.00 " font and size
-set smartindent
 set number
 set cursorline
+set smartindent
 set ts=2                   " tabs are 2 spaces
 set softtabstop=2
 set bs=2                   " backspace over everything in insert mode
@@ -52,6 +52,8 @@ set expandtab
 set shiftwidth=2           " Tabs under smart indent
 set linespace=4
 
+" Load ftplugins and indent files
+filetype plugin indent on
 
 " -------------------------------------------------------------------------
 " Folding settings
@@ -83,10 +85,6 @@ set formatoptions-=o " Don't continue comments when pushing o/O
 set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
-
-" Load ftplugins and indent files
-filetype plugin on
-filetype indent on
 
 " Some stuff to get the mouse going in term
 set mouse=a
