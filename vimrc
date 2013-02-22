@@ -75,9 +75,9 @@ set wildmode=list:longest   " make cmdline tab completion similar to bash
 set wildmenu                " enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
 
-" Display tabs and trailing spaces
+" Display trailing spaces (not tabs)
 set list
-set listchars=tab:>>,trail:.,extends:#,nbsp:?
+set listchars=tab:\ \ ,trail:.,extends:#,nbsp:?
 
 set formatoptions-=o " Don't continue comments when pushing o/O
 
