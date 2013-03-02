@@ -1,4 +1,4 @@
-setlocal ts=8
-setlocal sts=8
-setlocal sw=8
+setlocal ts=4
+setlocal sw=4
+setlocal sts=4
 setlocal noexpandtab
