@@ -6,11 +6,6 @@ if [[ -x `which git` ]]; then
     git branch 2> /dev/null | grep '^\*' | sed 's/^\*\ //'
   }
 
-  function git-dirty () {
-    git status 2> /dev/null | grep "nothing to commit (working directory clean)"
-    echo $?
-  }
-
   function git-need-to-push() {
     if pushtime=$(git status | grep 'Your branch is ahead' 2> /dev/null); then
       echo "↑ "
@@ -20,7 +15,7 @@ if [[ -x `which git` ]]; then
   function git-prompt() {
     gstatus=$(git status 2> /dev/null)
     branch=$(echo $gstatus | head -1 | sed 's/^# On branch //')
-    dirty=$(echo $gstatus | sed 's/^#.*$//' | tail -2 | grep 'nothing to commit (working directory clean)'; echo $?)
+    dirty=$(echo $gstatus | sed 's/^#.*$//' | tail -2 | grep "nothing to commit"; echo $?)
     if [[ x$branch != x ]]; then
       dirty_color=$fg[green]
       push_status=$(git-need-to-push)
