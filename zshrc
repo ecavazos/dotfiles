@@ -6,7 +6,10 @@ compinit
 autoload -U colors && colors
 
 # automatically enter directories without cd
-setopt auto_cd
+setopt \
+  auto_cd \
+  auto_menu \
+  correct
 
 # Do things to $PATH
 export PATH=$HOME/.bin:$PATH
@@ -21,16 +24,8 @@ export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH
 # always load rubygems
 # export RUBYOPT="-w rubygems"
 export RUBYOPT="rubygems"
-
-if [[ `uname` == "Darwin" ]]; then
-  alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-fi
-
-# use vim as an editor
-export EDITOR=vim
-
-# use macvim as git editor
-export GIT_EDITOR="$EDITOR -v"
+export EDITOR=vim              # use vim as an editor
+export GIT_EDITOR="$EDITOR -v" # use macvim as git editor
 
 # source additional config files
 if [[ $SHLVL < 3 ]]; then
