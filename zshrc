@@ -22,7 +22,9 @@ export PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH
 # export RUBYOPT="-w rubygems"
 export RUBYOPT="rubygems"
 
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+if [[ `uname` == "Darwin" ]]; then
+  alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+fi
 
 # use vim as an editor
 export EDITOR=vim
