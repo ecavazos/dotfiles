@@ -20,6 +20,7 @@ alias tlf='tail -f'
 alias ls='ls --color=auto'
 
 if [[ `uname` == "Darwin" ]]; then
+  alias ls='ls -G'
   alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 fi
 
