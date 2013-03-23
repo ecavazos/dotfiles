@@ -1,23 +1,6 @@
-# completion
+# enable completion
 autoload -U compinit
 compinit
-
-# colors
-autoload -U colors && colors
-
-# automatically enter directories without cd
-setopt \
-  auto_cd \
-  auto_menu \
-  correct \
-  histignoredups
-
-# Do things to $PATH
-export PATH=$HOME/.bin:$PATH
-export PATH=$HOME/.rbenv/bin:$PATH
-export PATH=/usr/local/mysql/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
 
 # source additional config files
 if [[ $SHLVL < 3 ]]; then
@@ -25,6 +8,26 @@ if [[ $SHLVL < 3 ]]; then
     source $f
   done
 fi
+
+zstyle ":completion:*" verbose yes
+
+# Fuzzy matching of completions for when you mistype them
+zstyle ":completion:*" completer _complete _match _approximate
+zstyle ":completion:*:match:*" original only
+zstyle ":completion:*:approximate:*" max-errors 2 numeric
+
+# colors
+autoload -U colors && colors
+
+setopt           \
+	append_history \
+	auto_cd        \
+	auto_menu      \
+	auto_pushd     \
+	correct        \
+	histignoredups \
+	pushd_silent   \
+	share_history
 
 # export ARCHFLAGS="-arch x86_64"
 # export LANG="en_us.UTF-8"
@@ -34,15 +37,16 @@ fi
 # export RUBYOPT="-w rubygems"
 export RUBYOPT="rubygems"
 export EDITOR=vim              # use vim as an editor
-export GIT_EDITOR="$EDITOR -v" # use macvim as git editor
+export GIT_EDITOR="$EDITOR -v" # use vim as git editor
 
-# Unbreak history
-export HISTSIZE=100000
-export HISTFILE="$HOME/.history"
-export SAVEHIST=$HISTSIZE
+HISTSIZE=100000
+HISTFILE="$HOME/.history"
+SAVEHIST=$HISTSIZE
+DIRSTACKSIZE=9
 
 # use incremental search
-bindkey '^R' history-incremental-search-backward
+bindkey "^R" history-incremental-pattern-search-backward
+bindkey "^S" history-incremental-pattern-search-forward
 
 if type rbenv > /dev/null; then
   eval "$(rbenv init -)"
