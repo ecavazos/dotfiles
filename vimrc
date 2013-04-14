@@ -163,14 +163,6 @@ map <silent> <D-/> <plug>NERDCommenterToggle
 map <silent> <leader>m <plug>NERDCommenterToggle
 map <silent> <leader>c <plug>NERDCommenterComment
 map <silent> <leader>u <plug>NERDCommenterInvert
-"au FileType ruby,coffee noremap <silent> ,c :s/^/#<cr> :noh<cr>
-"au FileType ruby,coffee noremap <silent> ,u :s/^#/<cr> :noh<cr>
-
-"au FileType javascript noremap <silent> ,c :s/^/\/\/<cr> :noh<cr>
-"au FileType javascript noremap <silent> ,u :s/^\/\//<cr> :noh<cr>
-
-"au FileType haml noremap <silent> ,c :s/^/-#<cr> :noh<cr>
-"au FileType haml noremap <silent> ,u :s/^-#/<cr> :noh<cr>
 
 " -------------------------------------------------------------------------
 " NERDTree
@@ -194,13 +186,6 @@ map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
 map <leader>b :CtrlPBuffer<CR> " search in open buffers
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-
-" -------------------------------------------------------------------------
-" AutoClose
-" -------------------------------------------------------------------------
-
-let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}'}
-let g:AutoCloseProtectedRegions = ["Character"]
 
 " -------------------------------------------------------------------------
 " Vimrc Shortcuts
