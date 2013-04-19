@@ -29,6 +29,7 @@
   ss      = status -s
   c       = commit
   ci      = commit
+	ca      = commit -a -v
   br      = branch
   co      = checkout
   df      = diff
@@ -38,7 +39,6 @@
   lola    = log --graph --decorate --pretty --oneline --abbrev-commit --all
   hs      = shortlog -ns HEAD
   unstage = reset HEAD
-	ca = commit -a -v
 
 [user]
   email = ejcavazos@gmail.com

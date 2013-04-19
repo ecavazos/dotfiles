@@ -85,6 +85,8 @@ set listchars=tab:\ \ ,trail:.,extends:#,nbsp:?
 "   :set formatoptions?
 set formatoptions-=o " Don't continue comments when pushing o/O
 
+set pastetoggle=<F2>
+
 " Vertical/horizontal scroll off settings
 " set scrolloff=3
 " set sidescrolloff=7
