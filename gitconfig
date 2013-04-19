@@ -38,6 +38,7 @@
   lola    = log --graph --decorate --pretty --oneline --abbrev-commit --all
   hs      = shortlog -ns HEAD
   unstage = reset HEAD
+	ca = commit -a -v
 
 [user]
   email = ejcavazos@gmail.com
