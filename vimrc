@@ -40,8 +40,7 @@ set t_Co=256
 " Text Editor
 " -------------------------------------------------------------------------
 
-set lbr
-set gfn=Inconsolata:h20.00 " font and size
+" set lbr
 set number
 set cursorline
 set smartindent
@@ -79,19 +78,24 @@ set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
 set list
 set listchars=tab:\ \ ,trail:.,extends:#,nbsp:?
 
+" To see available options:
+"   :help fo-table
+"
+" To see current options:
+"   :set formatoptions?
 set formatoptions-=o " Don't continue comments when pushing o/O
 
 " Vertical/horizontal scroll off settings
-set scrolloff=3
-set sidescrolloff=7
-set sidescroll=1
+" set scrolloff=3
+" set sidescrolloff=7
+" set sidescroll=1
 
 " Some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
 
 " Hide buffers when not displayed
-set hidden
+" set hidden
 
 " -------------------------------------------------------------------------
 " Mappings
@@ -163,14 +167,6 @@ map <silent> <D-/> <plug>NERDCommenterToggle
 map <silent> <leader>m <plug>NERDCommenterToggle
 map <silent> <leader>c <plug>NERDCommenterComment
 map <silent> <leader>u <plug>NERDCommenterInvert
-"au FileType ruby,coffee noremap <silent> ,c :s/^/#<cr> :noh<cr>
-"au FileType ruby,coffee noremap <silent> ,u :s/^#/<cr> :noh<cr>
-
-"au FileType javascript noremap <silent> ,c :s/^/\/\/<cr> :noh<cr>
-"au FileType javascript noremap <silent> ,u :s/^\/\//<cr> :noh<cr>
-
-"au FileType haml noremap <silent> ,c :s/^/-#<cr> :noh<cr>
-"au FileType haml noremap <silent> ,u :s/^-#/<cr> :noh<cr>
 
 " -------------------------------------------------------------------------
 " NERDTree
