@@ -30,7 +30,7 @@ setopt           \
 	share_history
 
 # export ARCHFLAGS="-arch x86_64"
-# export LANG="en_us.UTF-8"
+export LANG="en_us.UTF-8" # needed for tmux
 
 # always show warnings
 # always load rubygems
