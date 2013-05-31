@@ -1,5 +1,4 @@
 alias c="cd ~/code/alchemy"
-alias w="cd ~/code/work"
 alias d="cd ~/dotfiles"
 
 alias be="bundle exec"

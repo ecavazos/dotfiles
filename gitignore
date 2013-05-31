@@ -4,4 +4,4 @@
 *.swp
 *.swo
 .rvmrc
-
+**/host_hack.rb

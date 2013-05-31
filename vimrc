@@ -24,10 +24,6 @@ set linebreak             " wrap lines at convenient points
 set autoread              " reload external changes
 set visualbell            " visual beep
 
-if $TMUX == ''
-  set clipboard+=unnamed  " use system clipboard
-end
-
 " -------------------------------------------------------------------------
 " Colors
 " -------------------------------------------------------------------------
@@ -190,7 +186,6 @@ map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 " https://github.com/kien/ctrlp.vim
 " -------------------------------------------------------------------------
 
-map <leader>b :CtrlPBuffer<CR> " search in open buffers
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " -------------------------------------------------------------------------
