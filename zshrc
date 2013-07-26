@@ -29,9 +29,6 @@ setopt           \
 	pushd_silent   \
 	share_history
 
-# export ARCHFLAGS="-arch x86_64"
-# export LANG="en_us.UTF-8"
-
 # always show warnings
 # always load rubygems
 # export RUBYOPT="-w rubygems"
