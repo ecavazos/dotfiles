@@ -40,6 +40,7 @@ hi SpellBad             ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE    
 hi SpellRare            ctermfg=226  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
 hi SpellLocal           ctermfg=178  ctermbg=NONE cterm=underline guifg=NONE    guibg=#E93600 gui=none
 
+hi DiffAdd              ctermfg=15   ctermbg=28   cterm=NONE      guifg=NONE
 
 " Syntax highlighting
 hi Comment              ctermfg=244  ctermbg=234  cterm=NONE     guifg=#B0C5B8 guibg=#171717 gui=italic

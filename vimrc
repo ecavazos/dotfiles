@@ -28,9 +28,15 @@ set visualbell            " visual beep
 " Colors
 " -------------------------------------------------------------------------
 
-syntax enable
-colorscheme fixxx_console
 set t_Co=256
+syntax enable
+colorscheme Tomorrow-Night-Eighties
+
+hi clear SpellBad
+hi SpellBad cterm=underline
+
+hi clear SpellCap
+hi SpellCap cterm=underline
 
 " -------------------------------------------------------------------------
 " Text Editor
