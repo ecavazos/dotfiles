@@ -2,6 +2,9 @@
 autoload -U compinit
 compinit
 
+# emacs
+bindkey -e
+
 # source additional config files
 if [[ $SHLVL < 3 ]]; then
   for f in $HOME/.zsh/*; do
