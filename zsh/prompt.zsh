@@ -20,5 +20,10 @@ zstyle ":vcs_info:*" enable git
 precmd() { vcs_info }
 
 # set prompt
-PROMPT="%F{blue}%1~ %F{green}>%f "
-RPROMPT='${vcs_info_msg_0_}%f' # needs to be a single quoted string for vcs_info_msg_0_ to interpolate
+#
+# %6(c:...:)%5c - will show at most 5 path parts after that the path will be
+# prefixed with "..."
+PROMPT="%F{blue}%6(c:...:)%5c %F{green}$%f "
+
+# needs to be a single quoted string for vcs_info_msg_0_ to interpolate
+RPROMPT='${vcs_info_msg_0_}%f'
