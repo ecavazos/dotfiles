@@ -30,7 +30,6 @@ setopt           \
 	correct        \
 	histignoredups \
 	pushd_silent   \
-	share_history
 
 # always show warnings
 # always load rubygems

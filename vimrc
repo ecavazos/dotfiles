@@ -1,9 +1,12 @@
 " pathogen
 call pathogen#infect()
 
-" -------------------------------------------------------------------------
+" use % to jump between tags
+source $VIMRUNTIME/macros/matchit.vim
+
+" ------------------------------------------------------------------------------
 " Basics
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -12,61 +15,57 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-let mapleader=","         " set leader key
-set history=1000          " store lots of :cmdline history
-set directory=/tmp        " use directory for all .swp files
-set showcmd               " show incomplete commands
-set showmode              " show current mode down the bottom
-set incsearch             " find the next match as we type the search
-set hlsearch              " highlight searches by default
-set nowrap                " don't wrap lines
-set linebreak             " wrap lines at convenient points
-set autoread              " reload external changes
-set visualbell            " visual beep
+let mapleader=","       " set leader key
+let maplocalleader=",," " set local leader key
+set history=1000        " store lots of :cmdline history
+set directory=/tmp      " use directory for all .swp files
+set showcmd             " show incomplete commands
+set showmode            " show current mode down the bottom
+set incsearch           " find the next match as we type the search
+set hlsearch            " highlight searches by default
+set nowrap              " don't wrap lines
+set linebreak           " wrap lines at convenient points
+set autoread            " reload external changes
+set visualbell          " visual beep
+set autochdir           " change cwd to current file's dir
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Colors
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 set t_Co=256
 syntax enable
-colorscheme Tomorrow-Night-Eighties
+colorscheme fixxx2
 
-hi clear SpellBad
-hi SpellBad cterm=underline
-
-hi clear SpellCap
-hi SpellCap cterm=underline
-
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Text Editor
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 " set lbr
 set number
 set cursorline
 set smartindent
-set ts=2                   " tabs are 2 spaces
+set ts=2          " tabs are 2 spaces
 set softtabstop=2
-set bs=2                   " backspace over everything in insert mode
+set bs=2          " backspace over everything in insert mode
 set expandtab
-set shiftwidth=2           " Tabs under smart indent
+set shiftwidth=2  " Tabs under smart indent
 set linespace=4
 
 " Load ftplugins and indent files
 filetype plugin indent on
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Folding settings
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
-set foldmethod=indent     "fold based on indent
-set foldnestmax=3         "deepest fold is 3 levels
-set nofoldenable          "don't fold by default
+set foldmethod=indent     " fold based on indent
+set foldnestmax=3         " deepest fold is 3 levels
+set nofoldenable          " don't fold by default
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Status line
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 set laststatus=2
 set ruler " show cursor position
@@ -101,9 +100,9 @@ set ttymouse=xterm2
 " Hide buffers when not displayed
 " set hidden
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Mappings
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 " Get out of insert mode
 inoremap kj <Esc>
@@ -140,9 +139,9 @@ set wildignore=*.dll,*.o,*.obj,*.bak,*.pyc,*.swp " ignore these"
 " Turn off rails bits of statusbar
 let g:rails_statusline=0
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Long line warning
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 if exists('+colorcolumn')
   set colorcolumn=80
@@ -155,15 +154,15 @@ endif
 set ignorecase
 set smartcase
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Grep.vim
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 map gr :Grep -rin
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " NERDCommenter
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 let NERDSpaceDelims = 1
 
@@ -172,9 +171,9 @@ map <silent> <leader>m <plug>NERDCommenterToggle
 map <silent> <leader>c <plug>NERDCommenterComment
 map <silent> <leader>u <plug>NERDCommenterInvert
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " NERDTree
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 let NERDTreeDirArrows=0
 let NERDTreeShowBookmarks = 1
@@ -187,35 +186,36 @@ map <leader>N :NERDTreeFind<cr>
 " Show current file in NERDTree
 map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " CtrlP - Full path fuzzy file, buffer, mru and tag finder for Vim.
 " https://github.com/kien/ctrlp.vim
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Vimrc Shortcuts
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
-map <leader>v :sp ~/.vimrc<CR>
-map <leader>V :source ~/.vimrc<CR> :source ~/.gvimrc<CR> :filetype detect<CR> :exe ":echo 'vimrc reloaded'"<CR>
+map <leader>V :sp ~/.vimrc<CR>
+map <leader>v :source ~/.vimrc<CR> :source ~/.gvimrc<CR> :filetype detect<CR> :exe ":echo 'vimrc reloaded'"<CR>
 
 " automatically reload vimrc when it's saved
-au BufWritePost .vimrc so ~/.vimrc
+" au BufWritePost .vimrc so ~/.vimrc (may be super slow)
+" au BufWritePost vimrc so ~/.vimrc (may be super slow)
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Open relative files
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 let currdir = expand('%:h') . '/'
 map <leader>e :e <C-R>=currdir<CR>
 map <leader>t :tabe <C-R>=currdir<CR>
 map <leader>s :sp <C-R>=currdir<CR>
 
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 " Tidy
-" -------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
 
 function! Preserve(command)
   " Preparation: save last search, and cursor position.
@@ -237,5 +237,12 @@ nmap <leader>q :call Preserve("normal gg=G")<CR>
 
 " :retab!  convert tabs to spaces
 
-map <Leader>r :let @+="bundle exec rspec " .@% . ":" . line(".")<CR>
+" Show syntax highlighting groups for word under cursor
+nmap <leader>h :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
