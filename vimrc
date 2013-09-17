@@ -8,8 +8,8 @@ source $VIMRUNTIME/macros/matchit.vim
 " Basics
 " ------------------------------------------------------------------------------
 
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
+" Use Vim settings, rather then Vi settings (much better!).  This must be first,
+" because it changes other options as a side effect.
 set nocompatible
 
 " allow backspacing over everything in insert mode
@@ -27,7 +27,7 @@ set nowrap              " don't wrap lines
 set linebreak           " wrap lines at convenient points
 set autoread            " reload external changes
 set visualbell          " visual beep
-set autochdir           " change cwd to current file's dir
+" set autochdir           " change cwd to current file's dir
 
 " ------------------------------------------------------------------------------
 " Colors
@@ -176,9 +176,9 @@ map <silent> <leader>u <plug>NERDCommenterInvert
 " ------------------------------------------------------------------------------
 
 let NERDTreeDirArrows=0
-let NERDTreeShowBookmarks = 1
-let NERDChristmasTree = 1
-let NERDTreeWinPos = "left"
+let NERDTreeShowBookmarks=1
+let NERDChristmasTree=1
+let NERDTreeWinPos="left"
 
 map <leader>n :NERDTreeToggle<cr>
 map <leader>N :NERDTreeFind<cr>
