@@ -164,7 +164,7 @@ map gr :Grep -rin
 " NERDCommenter
 " ------------------------------------------------------------------------------
 
-let NERDSpaceDelims = 1
+let NERDSpaceDelims=1
 
 map <silent> <D-/> <plug>NERDCommenterToggle
 map <silent> <leader>m <plug>NERDCommenterToggle
@@ -191,7 +191,7 @@ map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 " https://github.com/kien/ctrlp.vim
 " ------------------------------------------------------------------------------
 
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_custom_ignore='\.git$\|\.hg$\|\.svn$'
 
 " ------------------------------------------------------------------------------
 " Vimrc Shortcuts
@@ -246,3 +246,4 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+let g:syntastic_java_javac_config_file_enabled=1
