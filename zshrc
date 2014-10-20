@@ -51,3 +51,4 @@ if type rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+export GOPATH=$HOME/code/golang
