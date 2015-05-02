@@ -1,6 +1,8 @@
-" set transparency=12
+set transparency=8
 
-set gfn=Inconsolata:h20.00 " font and size
+set gfn=Menlo\ Regular:h16.00 " font and size
+
+set background=dark
 
 " -------------------------------------------------------------------------
 " GUI
@@ -47,5 +49,5 @@ map! <D-9> <C-O>:tabn 9<CR>
 " https://github.com/skalnik/vim-vroom
 " -------------------------------------------------------------------------
 
-let g:vroom_use_colors = 1
+"let g:vroom_use_colors = 1
 

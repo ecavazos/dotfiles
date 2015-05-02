@@ -6,14 +6,14 @@
 
 set background=dark
 
-if has('gui_running')
-    set background=dark
-endif
-
 hi clear
 
 if exists('syntax_on')
    syntax reset
+endif
+
+if has('gui_running')
+    set background=dark
 endif
 
 let colors_name = 'fixxx_console'

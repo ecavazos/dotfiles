@@ -1,5 +1,5 @@
 alias c="cd ~/code"
-alias d="cd ~/dotfiles"
+alias d="vim ~/code/dotfiles"
 
 alias be="bundle exec"
 alias rs="be rspec"

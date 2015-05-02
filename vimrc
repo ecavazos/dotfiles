@@ -27,6 +27,7 @@ set nowrap              " don't wrap lines
 set linebreak           " wrap lines at convenient points
 set autoread            " reload external changes
 set visualbell          " visual beep
+set splitright          " open new vsplits to the right of the current pane
 " set autochdir           " change cwd to current file's dir
 
 " ------------------------------------------------------------------------------
