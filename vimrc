@@ -2,7 +2,7 @@
 call pathogen#infect()
 
 " use % to jump between tags
-source $VIMRUNTIME/macros/matchit.vim
+:runtime macros/matchit.vim
 
 " ------------------------------------------------------------------------------
 " Basics
@@ -97,7 +97,9 @@ set pastetoggle=<F2>
 
 " Some stuff to get the mouse going in term
 set mouse=a
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 
 " Hide buffers when not displayed
 " set hidden

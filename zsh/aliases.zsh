@@ -1,6 +1,7 @@
 alias c="cd ~/code"
-alias d="$EDITOR ~/code/dotfiles"
-alias dt="cd ~/code/dotfiles"
+alias d="cd ~/code/dotfiles"
+alias de="$EDITOR ~/code/dotfiles"
+alias nvim="TERM=xterm-256color nvim ~/code/dotfiles"
 
 alias be="bundle exec"
 alias rs="be rspec"
