@@ -37,6 +37,7 @@ set splitright          " open new vsplits to the right of the current pane
 set t_Co=256
 syntax enable
 colorscheme fixxx2
+hi Normal guibg=None ctermbg=None
 
 " ------------------------------------------------------------------------------
 " Text Editor
