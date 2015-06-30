@@ -149,7 +149,7 @@ let g:rails_statusline=0
 
 if exists('+colorcolumn')
   set colorcolumn=80
-  hi ColorColumn guibg=#300000 ctermbg=52
+  hi ColorColumn guibg=#300000 ctermbg=45
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
@@ -176,19 +176,10 @@ map <silent> <leader>c <plug>NERDCommenterComment
 map <silent> <leader>u <plug>NERDCommenterInvert
 
 " ------------------------------------------------------------------------------
-" NERDTree
+" Netrw
 " ------------------------------------------------------------------------------
 
-let NERDTreeDirArrows=0
-let NERDTreeShowBookmarks=1
-let NERDChristmasTree=1
-let NERDTreeWinPos="left"
-
-map <leader>n :NERDTreeToggle<cr>
-map <leader>N :NERDTreeFind<cr>
-
-" Show current file in NERDTree
-map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+let g:netrw_liststyle=3
 
 " ------------------------------------------------------------------------------
 " CtrlP - Full path fuzzy file, buffer, mru and tag finder for Vim.
