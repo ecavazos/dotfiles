@@ -16,7 +16,7 @@ if has('gui_running')
     set background=dark
 endif
 
-let colors_name = 'fixxx_console'
+let colors_name = 'fixxx2'
 
 if version >= 700
   hi CursorLine   ctermfg=NONE  ctermbg=235  cterm=NONE guifg=NONE guibg=#181818 gui=none

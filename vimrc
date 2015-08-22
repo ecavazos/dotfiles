@@ -36,7 +36,7 @@ set splitright          " open new vsplits to the right of the current pane
 
 set t_Co=256
 syntax enable
-colorscheme fixxx2
+colorscheme fixxx_console
 hi Normal guibg=NONE ctermbg=NONE
 
 " ------------------------------------------------------------------------------
@@ -50,12 +50,13 @@ set smartindent
 set ts=2          " tabs are 2 spaces
 set softtabstop=2
 set bs=2          " backspace over everything in insert mode
-set expandtab
 set shiftwidth=2  " Tabs under smart indent
+set expandtab
 set linespace=4
+filetype indent on
 
 " Load ftplugins and indent files
-filetype plugin indent on
+filetype indent plugin on
 
 " ------------------------------------------------------------------------------
 " Folding settings
@@ -193,7 +194,7 @@ let g:ctrlp_custom_ignore='\.git$\|\.hg$\|\.svn$'
 " ------------------------------------------------------------------------------
 
 map <leader>V :sp ~/.vimrc<CR>
-map <leader>v :source ~/.vimrc<CR> :source ~/.gvimrc<CR> :filetype detect<CR> :exe ":echo 'vimrc reloaded'"<CR>
+map <leader>v :source ~/.vimrc<CR> :filetype detect<CR> :exe ":echo 'vimrc reloaded'"<CR>
 
 " automatically reload vimrc when it's saved
 " au BufWritePost .vimrc so ~/.vimrc (may be super slow)
