@@ -1,4 +1,5 @@
-# This file is a lo-fi way for me to collect *nix commands I've found useful.
+# Really useful (but rarely used) *nix commands that I won't remember unless
+# I save them here.
 
 ##
 # Find the 10 biggest files in a directory.
@@ -21,12 +22,13 @@
 find ~/ -type f -size +100M -print0 | xargs -0 ls -lhS | head -n 10 \
   | awk '{print $5,$9}'
 
+
 ##
 # Redirect stderr to /dev/null
 #
 # 2>/dev/null
-# find / -name foo 2>/dev/null
-#
+find / -name foo 2>/dev/null
+
 
 ##
 # Remove all files that match a search
