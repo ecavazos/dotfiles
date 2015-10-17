@@ -6,3 +6,5 @@ export PATH=/usr/local/sbin:$PATH
 
 export GOPATH=$HOME/code/go
 export PATH=$GOPATH/bin:$PATH
+
+source /Users/emilio/google-cloud-sdk/path.zsh.inc
