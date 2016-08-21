@@ -23,6 +23,7 @@ zstyle ":completion:*:approximate:*" max-errors 2 numeric
 autoload -U colors && colors
 
 setopt           \
+  share_history  \
 	append_history \
 	auto_cd        \
 	auto_menu      \
