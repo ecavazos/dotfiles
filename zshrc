@@ -36,17 +36,11 @@ setopt           \
 # always load rubygems
 # export RUBYOPT="-w rubygems"
 
-if command -v nvim >/dev/null 2>&1; then
-  # use neovim as an editor
-  export EDITOR=nvim
-else
-  # use vim as an editor
-  export EDITOR=vim
-fi
+# use vim as an editor
+export EDITOR=vim
 
 export RUBYOPT="rubygems"
 export GIT_EDITOR="$EDITOR -v" # use vim as git editor
-
 
 HISTSIZE=100000
 HISTFILE="$HOME/.history"
