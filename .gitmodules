@@ -61,12 +61,3 @@
 [submodule "vim/bundle/vim-ycm"]
 	path = vim/bundle/vim-ycm
 	url = https://github.com/Valloric/YouCompleteMe
-[submodule "vim/bundle/rufo"]
-	path = vim/bundle/rufo
-	url = https://github.com/ruby-formatter/rufo.git
-[submodule "vim/bundle/vim-codefmt"]
-	path = vim/bundle/vim-codefmt
-	url = https://github.com/google/vim-codefmt.git
-[submodule "vim/bundle/vim-maktaba"]
-	path = vim/bundle/vim-maktaba
-	url = https://github.com/google/vim-maktaba.git

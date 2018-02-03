@@ -243,18 +243,3 @@ function! <SID>SynStack()
 endfunc
 
 let g:syntastic_java_javac_config_file_enabled=1
-
-" Enable auto formatting (https://github.com/google/vim-codefmt)
-augroup autoformat_settings
-  autocmd FileType bzl AutoFormatBuffer buildifier
-  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
-  autocmd FileType dart AutoFormatBuffer dartfmt
-  autocmd FileType go AutoFormatBuffer gofmt
-  autocmd FileType gn AutoFormatBuffer gn
-  autocmd FileType html,css,json AutoFormatBuffer js-beautify
-  autocmd FileType java AutoFormatBuffer google-java-format
-  autocmd FileType python AutoFormatBuffer yapf
-augroup END
-
-" Enable RuFo (https://github.com/ruby-formatter/rufo-vim)
-let g:rufo_auto_formatting = 1
