@@ -15,6 +15,9 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" Use system clipboard for y, p
+set clipboard=unnamedplus
+
 let mapleader=","       " set leader key
 let maplocalleader=",," " set local leader key
 set history=1000        " store lots of :cmdline history
