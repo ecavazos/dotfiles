@@ -1,8 +1,8 @@
-require 'rubygems'
-require 'date'
-require 'pp'
-require 'irb/completion'
-require 'irb/ext/save-history'
+# require 'rubygems'
+# require 'date'
+# require 'pp'
+# require 'irb/completion'
+# require 'irb/ext/save-history'
 
 IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:USE_READLINE] = true

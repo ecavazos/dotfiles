@@ -32,14 +32,10 @@ setopt           \
 	histignoredups \
 	pushd_silent   \
 
-# always show warnings
-# always load rubygems
-# export RUBYOPT="-w rubygems"
 
 # use vim as an editor
-export EDITOR=vim
+export EDITOR=codium
 
-export RUBYOPT="rubygems"
 export GIT_EDITOR="$EDITOR -v" # use vim as git editor
 
 HISTSIZE=100000
