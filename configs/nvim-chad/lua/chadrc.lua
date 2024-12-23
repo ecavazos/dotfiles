@@ -8,7 +8,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "chadtain",
+	theme = "nightlamp",
 
 	hl_override = {
     DiffAdd = { fg = { "white", "green", 40 }, bg = { "black", "green", 15 } },
