@@ -1,0 +1,10 @@
+frame = "none"
+
+[font]
+normal = ["FiraCode Nerd Font"]
+size = 16
+hinting = "full"
+edging = "antialias"
+
+title-hidden = true
+
